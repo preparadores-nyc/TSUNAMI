@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>TSUNAMI — Tu negocio funciona solo, tú descansas</title>
-<meta name="description" content="Automatizamos tu negocio con WhatsApp. Bot 24/7, cobros automáticos y panel de control. Hecho para Chile. Desde $149.990 CLP."/>
+<title>Tsunami Soluciones — Tu negocio vende 24/7 sin contratar a nadie</title>
+<meta name="description" content="Automatizamos tu WhatsApp con IA para que tu negocio atienda, cobre y venda las 24 horas. Hecho para pymes en Chile. Desde $190.000 CLP."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -16,7 +16,7 @@
   --pri:#0284c7; --pri2:#0ea5e9; --sec:#4f46e5; --acc:#0891b2;
   --grn:#059669; --grn2:#10b981;
   --orb1:rgba(14,165,233,0.12); --orb2:rgba(79,70,229,0.10); --orb3:rgba(8,145,178,0.08);
-  --nav-bg:rgba(255,255,255,0.85); --glass:rgba(255,255,255,0.7);
+  --nav-bg:rgba(255,255,255,0.85);
 }
 [data-theme="dark"] {
   --bg:#030712; --bg2:#0c1120; --surface:rgba(255,255,255,0.05); --surface2:rgba(255,255,255,0.03);
@@ -26,128 +26,135 @@
   --orb1:rgba(14,165,233,0.20); --orb2:rgba(79,70,229,0.18); --orb3:rgba(8,145,178,0.15);
   --nav-bg:rgba(3,7,18,0.85);
 }
-*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; }
-body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--tx); overflow-x:hidden; transition:background .6s,color .4s; -webkit-font-smoothing:antialiased; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;transition:background .6s,color .4s;-webkit-font-smoothing:antialiased}
 
-/* fondo animado */
-.bg-wrap { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
-.orb { position:absolute; border-radius:50%; filter:blur(80px); animation:orbFloat 20s ease-in-out infinite; }
-.orb-1 { width:600px;height:600px;background:var(--orb1);top:-150px;left:-200px;animation-delay:0s; }
-.orb-2 { width:500px;height:500px;background:var(--orb2);top:30%;right:-150px;animation-delay:-7s; }
-.orb-3 { width:450px;height:450px;background:var(--orb3);bottom:5%;left:20%;animation-delay:-14s; }
+/* BG ANIMADO */
+.bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);animation:orbFloat 20s ease-in-out infinite}
+.orb-1{width:600px;height:600px;background:var(--orb1);top:-150px;left:-200px;animation-delay:0s}
+.orb-2{width:500px;height:500px;background:var(--orb2);top:30%;right:-150px;animation-delay:-7s}
+.orb-3{width:450px;height:450px;background:var(--orb3);bottom:5%;left:20%;animation-delay:-14s}
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-40px) scale(1.05)}66%{transform:translate(-20px,30px) scale(0.95)}}
-#pts { position:absolute; inset:0; opacity:.6; }
-.wave-bg { position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(180deg,transparent,var(--bg2));opacity:.5; }
+#pts{position:absolute;inset:0;opacity:.6}
+.wave-bg{position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(180deg,transparent,var(--bg2));opacity:.5}
 
-/* layout */
-.container { max-width:1100px; margin:0 auto; padding:0 20px; position:relative; z-index:2; }
+.container{max-width:1100px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
 
-/* theme bar */
-.theme-bar { position:fixed;top:0;right:0;z-index:200;padding:12px 16px;display:flex;align-items:center;gap:8px; }
-.theme-toggle { width:44px;height:24px;border-radius:999px;background:var(--border2);border:none;cursor:pointer;position:relative;transition:background .3s;flex-shrink:0; }
-.theme-toggle::after { content:'☀️';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:11px;transition:transform .3s,background .3s;box-shadow:0 1px 4px rgba(0,0,0,.2);line-height:20px;text-align:center; }
-[data-theme="dark"] .theme-toggle::after { content:'🌙';transform:translateX(20px); }
-.theme-label { font-size:.7rem;color:var(--ts);font-weight:600;letter-spacing:.05em; }
+/* THEME BAR */
+.theme-bar{position:fixed;top:0;right:0;z-index:200;padding:12px 16px;display:flex;align-items:center;gap:8px}
+.theme-toggle{width:44px;height:24px;border-radius:999px;background:var(--border2);border:none;cursor:pointer;position:relative;transition:background .3s;flex-shrink:0}
+.theme-toggle::after{content:'☀️';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:11px;transition:transform .3s,background .3s;box-shadow:0 1px 4px rgba(0,0,0,.2);line-height:20px;text-align:center}
+[data-theme="dark"] .theme-toggle::after{content:'🌙';transform:translateX(20px)}
+.theme-label{font-size:.7rem;color:var(--ts);font-weight:600;letter-spacing:.05em}
 
-/* nav */
-nav { position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;transition:all .4s; }
-nav.scrolled { background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow); }
-.nav-inner { max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:68px; }
-.logo-wrap { display:flex;align-items:center;gap:10px;text-decoration:none; }
-.logo-icon { width:36px;height:36px;flex-shrink:0; }
-.logo-text { font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.01em;background:linear-gradient(135deg,var(--pri),var(--sec));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-.logo-sub { font-size:.55rem;font-weight:600;color:var(--ts);text-transform:uppercase;letter-spacing:.12em;display:block;margin-top:-2px; }
-.nav-links { display:flex;gap:24px;list-style:none;align-items:center; }
-.nav-links a { font-size:.84rem;font-weight:500;color:var(--tm);text-decoration:none;transition:color .3s; }
-.nav-links a:hover { color:var(--pri); }
-.nav-cta { background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff !important;padding:9px 20px;border-radius:999px;font-weight:700 !important;box-shadow:0 4px 16px rgba(2,132,199,.35);transition:all .3s !important; }
-.nav-cta:hover { transform:translateY(-2px);box-shadow:0 8px 28px rgba(2,132,199,.45) !important; }
-.hamburger { display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none; }
-.hamburger span { width:22px;height:2px;background:var(--tm);border-radius:999px;transition:all .3s;display:block; }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;transition:all .4s}
+nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;flex-shrink:0}
+.logo-text{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.01em;background:linear-gradient(135deg,var(--pri),var(--sec));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{font-size:.55rem;font-weight:600;color:var(--ts);text-transform:uppercase;letter-spacing:.12em;display:block;margin-top:-2px}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-size:.84rem;font-weight:500;color:var(--tm);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--pri)}
+.nav-cta{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff !important;padding:9px 20px;border-radius:999px;font-weight:700 !important;box-shadow:0 4px 16px rgba(2,132,199,.35);transition:all .3s !important}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(2,132,199,.45) !important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--tm);border-radius:999px;transition:all .3s;display:block}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.mobile-menu { display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:20px;flex-direction:column;gap:16px; }
-.mobile-menu.open { display:flex; }
-.mobile-menu a { font-size:.95rem;font-weight:500;color:var(--tm);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border); }
-.mobile-menu a:last-child { border-bottom:none; }
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:20px;flex-direction:column;gap:16px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:.95rem;font-weight:500;color:var(--tm);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none}
 
-/* hero */
-.hero { min-height:100vh;display:flex;align-items:center;padding:100px 0 60px;text-align:center; }
-.hero-inner { max-width:780px;margin:0 auto; }
-.hero-badge { display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border2);border-radius:999px;padding:7px 18px;font-size:.78rem;font-weight:700;color:var(--pri);margin-bottom:28px;box-shadow:var(--shadow);animation:fadeUp .7s ease both; }
-.badge-dot { width:7px;height:7px;border-radius:50%;background:var(--grn2);animation:pulse 2s infinite; }
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 60px;text-align:center}
+.hero-inner{max-width:800px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border2);border-radius:999px;padding:7px 18px;font-size:.78rem;font-weight:700;color:var(--pri);margin-bottom:28px;box-shadow:var(--shadow);animation:fadeUp .7s ease both}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--grn2);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}70%{box-shadow:0 0 0 9px rgba(16,185,129,0)}}
-.hero h1 { font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:24px;color:var(--tx);animation:fadeUp .7s .1s ease both; }
-.hero h1 .grad { background:linear-gradient(135deg,var(--pri) 0%,var(--sec) 60%,var(--acc) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite; }
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:24px;color:var(--tx);animation:fadeUp .7s .1s ease both}
+.hero h1 .grad{background:linear-gradient(135deg,var(--pri) 0%,var(--sec) 60%,var(--acc) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite}
 @keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
-.hero-p { font-size:1.08rem;color:var(--tm);max-width:580px;margin:0 auto 40px;line-height:1.9;animation:fadeUp .7s .2s ease both; }
-.hero-btns { display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp .7s .3s ease both; }
-.btn-wa { display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:16px 30px;border-radius:14px;font-weight:700;font-size:.95rem;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:all .3s; }
+.hero h2{font-family:'Inter',sans-serif;font-size:1.15rem;color:var(--tm);max-width:620px;margin:0 auto 40px;line-height:1.85;font-weight:400;animation:fadeUp .7s .2s ease both}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:16px 30px;border-radius:14px;font-weight:700;font-size:.95rem;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:all .3s}
 .btn-wa:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,.45)}
-.btn-scroll { display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--border2);color:var(--tm);padding:16px 28px;border-radius:14px;font-weight:600;font-size:.95rem;text-decoration:none;box-shadow:var(--shadow);transition:all .3s; }
+.btn-scroll{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--border2);color:var(--tm);padding:16px 28px;border-radius:14px;font-weight:600;font-size:.95rem;text-decoration:none;box-shadow:var(--shadow);transition:all .3s}
 .btn-scroll:hover{transform:translateY(-3px);border-color:var(--pri);color:var(--pri)}
-.hero-stats { display:flex;gap:0;margin-top:60px;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);animation:fadeUp .7s .45s ease both; }
-.stat { flex:1;padding:20px 16px;text-align:center;border-right:1px solid var(--border); }
+
+/* STATS */
+.hero-stats{display:flex;gap:0;margin-top:60px;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);animation:fadeUp .7s .45s ease both}
+.stat{flex:1;padding:20px 16px;text-align:center;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
-.stat-v { font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;color:var(--pri);line-height:1; }
-.stat-l { font-size:.68rem;color:var(--ts);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px; }
+.stat-v{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;color:var(--pri);line-height:1}
+.stat-l{font-size:.68rem;color:var(--ts);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.scroll-ind { position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp 1s 1s ease both; }
+.scroll-ind{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp 1s 1s ease both}
 .scroll-mouse{width:22px;height:35px;border:2px solid var(--border2);border-radius:999px;display:flex;justify-content:center;padding-top:5px}
 .scroll-dot{width:3px;height:7px;background:var(--ts);border-radius:999px;animation:sdot 2s ease-in-out infinite}
 @keyframes sdot{0%{transform:translateY(0);opacity:1}80%{transform:translateY(13px);opacity:0}100%{transform:translateY(0);opacity:0}}
 .scroll-lbl{font-size:.6rem;color:var(--ts);letter-spacing:.15em;text-transform:uppercase}
 
-/* cards */
-.card { background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.175,.885,.32,1.275);box-shadow:var(--shadow); }
-.card:hover { border-color:var(--border2);transform:translateY(-6px) scale(1.01);box-shadow:var(--shadow-lg); }
-.card::before { content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,165,233,.04),transparent);opacity:0;transition:opacity .4s;pointer-events:none; }
+/* TECH STRIP */
+.tech-strip{padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:2;background:var(--surface2)}
+.tech-inner{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+.tech-lbl{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ts);white-space:nowrap}
+.tech-logos{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center}
+.tech-item{display:flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--tm);padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;white-space:nowrap}
+.tech-item span{font-size:1rem}
+
+/* CARDS */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.175,.885,.32,1.275);box-shadow:var(--shadow)}
+.card:hover{border-color:var(--border2);transform:translateY(-6px) scale(1.01);box-shadow:var(--shadow-lg)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,165,233,.04),transparent);opacity:0;transition:opacity .4s;pointer-events:none}
 .card:hover::before{opacity:1}
 
-/* sections */
-section { padding:100px 0;position:relative;z-index:2; }
-.sec-label { display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pri);margin-bottom:14px; }
-.sec-h { font-family:'Space Grotesk',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.12;color:var(--tx);margin-bottom:16px; }
-.sec-h em { font-style:normal;background:linear-gradient(135deg,var(--pri),var(--sec));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-.sec-p { font-size:1rem;color:var(--tm);max-width:600px;line-height:1.85; }
+/* SECTIONS */
+section{padding:100px 0;position:relative;z-index:2}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pri);margin-bottom:14px}
+.sec-h{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.12;color:var(--tx);margin-bottom:16px}
+.sec-h em{font-style:normal;background:linear-gradient(135deg,var(--pri),var(--sec));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-p{font-size:1rem;color:var(--tm);max-width:620px;line-height:1.85}
 .rev{opacity:0;transform:translateY(36px);transition:opacity .65s ease,transform .65s ease}
 .rev.vis{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 [data-tilt]{transform-style:preserve-3d;will-change:transform}
 
-/* problemas */
-.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:52px}
-.pain-card{padding:30px}
-.pain-em{font-size:2rem;margin-bottom:12px;display:block;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
-.pain-card:hover .pain-em{transform:scale(1.25) rotate(-8deg)}
-.pain-t{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:var(--tx);margin-bottom:8px}
-.pain-d{font-size:.87rem;color:var(--tm);line-height:1.8}
-.pain-sol{color:var(--grn);font-weight:600}
+/* PROBLEMA — COSTO DE OPORTUNIDAD */
+.opp-section{background:var(--surface2)}
+.opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:center}
+.opp-visual{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:36px;box-shadow:var(--shadow)}
+.opp-scenario{font-size:.88rem;color:var(--tm);line-height:1.9;margin-bottom:20px}
+.opp-scenario strong{color:var(--tx)}
+.opp-time{font-family:'Space Grotesk',sans-serif;text-align:center;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.opp-time-v{font-size:2.4rem;font-weight:800;color:#dc2626;line-height:1}
+.opp-time-l{font-size:.72rem;font-weight:600;color:var(--ts);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.opp-loss-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.opp-loss{text-align:center;padding:14px;background:rgba(220,38,38,.05);border:1px solid rgba(220,38,38,.12);border-radius:12px}
+.opp-loss-v{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:800;color:#dc2626}
+.opp-loss-l{font-size:.65rem;font-weight:600;color:var(--ts);margin-top:2px}
+.opp-text h3{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:800;color:var(--tx);margin-bottom:16px;line-height:1.2}
+.opp-text p{font-size:.95rem;color:var(--tm);line-height:1.9;margin-bottom:14px}
+.opp-text .highlight{color:var(--pri);font-weight:700}
+.opp-cta-line{margin-top:20px;padding:14px 20px;background:rgba(5,150,105,.06);border:1px solid rgba(5,150,105,.15);border-radius:12px;font-size:.88rem;color:var(--grn);font-weight:600;line-height:1.7}
 
-/* que hacemos */
-.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
-.what-card{padding:28px;text-align:center}
-.wi{width:60px;height:60px;border-radius:16px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
-.what-card:hover .wi{transform:scale(1.15) rotate(6deg)}
-.wi-b{background:rgba(2,132,199,.1)}.wi-p{background:rgba(79,70,229,.1)}.wi-g{background:rgba(5,150,105,.1)}.wi-c{background:rgba(8,145,178,.1)}.wi-o{background:rgba(234,88,12,.1)}.wi-y{background:rgba(202,138,4,.1)}
-.what-t{font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700;color:var(--tx);margin-bottom:8px}
-.what-d{font-size:.83rem;color:var(--tm);line-height:1.8}
+/* SOLUCIÓN — EL VENDEDOR AUTÓNOMO */
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+.sol-card{padding:28px;text-align:center}
+.sol-step-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:800;margin:0 auto 16px;box-shadow:0 4px 14px rgba(2,132,199,.3)}
+.sol-em{font-size:2.2rem;margin-bottom:10px;display:block;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
+.sol-card:hover .sol-em{transform:scale(1.2) rotate(-6deg)}
+.sol-t{font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700;color:var(--tx);margin-bottom:8px}
+.sol-d{font-size:.83rem;color:var(--tm);line-height:1.8}
 
-/* pasos */
-.steps{margin-top:52px;display:flex;flex-direction:column;gap:0;position:relative;max-width:760px}
-.steps-line{position:absolute;left:28px;top:32px;bottom:32px;width:2px;background:linear-gradient(180deg,var(--pri),var(--sec),var(--grn));opacity:.25;border-radius:999px}
-.step{display:flex;gap:24px;align-items:flex-start;padding:24px 0;position:relative;z-index:1}
-.step-n{width:56px;height:56px;min-width:56px;border-radius:50%;background:var(--surface);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;color:var(--pri);transition:all .35s;box-shadow:var(--shadow);flex-shrink:0}
-.step:hover .step-n{background:var(--pri);border-color:var(--pri);color:#fff;box-shadow:0 0 28px rgba(2,132,199,.4);transform:scale(1.1)}
-.step-t{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:var(--tx);margin-bottom:6px}
-.step-d{font-size:.88rem;color:var(--tm);line-height:1.85;max-width:580px}
-.step-ok .step-n{background:var(--grn);border-color:var(--grn);color:#fff;box-shadow:0 0 24px rgba(5,150,105,.4)}
-.step-ok .step-t{color:var(--grn)}
-
-/* chat */
-.chat-box{margin-top:48px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:32px;max-width:500px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow)}
+/* CHAT BIG */
+.chat-box{margin-top:52px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:32px;max-width:520px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow)}
 .chat-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--sec));display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff}
 .chat-name{font-family:'Space Grotesk',sans-serif;font-size:.88rem;font-weight:700;color:var(--tx)}
@@ -161,15 +168,17 @@ section { padding:100px 0;position:relative;z-index:2; }
 .mb .msg-lbl{color:var(--sec)}
 .chat-note{margin-top:16px;text-align:center;font-size:.78rem;color:var(--grn);font-weight:600;background:rgba(5,150,105,.06);border:1px solid rgba(5,150,105,.15);border-radius:10px;padding:10px}
 
-/* beneficios */
-.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
-.ben-card{padding:28px;text-align:center}
-.ben-em{font-size:2.2rem;margin-bottom:12px;display:block;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
-.ben-card:hover .ben-em{transform:scale(1.3) rotate(-6deg)}
-.ben-t{font-family:'Space Grotesk',sans-serif;font-size:.96rem;font-weight:700;color:var(--tx);margin-bottom:8px}
-.ben-d{font-size:.84rem;color:var(--tm);line-height:1.8}
+/* ROI CALCULATOR */
+.roi-box{margin-top:48px;background:var(--surface);border:1.5px solid rgba(2,132,199,.25);border-radius:20px;padding:36px;max-width:560px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow-lg);text-align:center}
+.roi-t{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;color:var(--tx);margin-bottom:20px}
+.roi-row{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
+.roi-metric{text-align:center}
+.roi-metric-v{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;color:var(--grn)}
+.roi-metric-l{font-size:.68rem;font-weight:600;color:var(--ts);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.roi-conclusion{font-size:.92rem;color:var(--tm);line-height:1.8;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.roi-conclusion strong{color:var(--pri)}
 
-/* planes */
+/* PLANES */
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;perspective:1200px}
 .plan{padding:0;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
 .plan:hover{transform:translateY(-10px) rotateX(3deg)}
@@ -178,7 +187,8 @@ section { padding:100px 0;position:relative;z-index:2; }
 .plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 14px rgba(2,132,199,.4);z-index:2}
 .plan-inner{padding:32px 26px;position:relative;z-index:1}
 .plan-tier{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ts);margin-bottom:6px}
-.plan-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;color:var(--tx);margin-bottom:18px}
+.plan-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;color:var(--tx);margin-bottom:6px}
+.plan-pitch{font-size:.82rem;color:var(--pri);font-weight:600;font-style:italic;margin-bottom:18px;line-height:1.5}
 .plan-price-area{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border)}
 .plan-setup-lbl{font-size:.65rem;color:var(--ts);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
 .plan-setup-v{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:800;color:var(--tx);line-height:1;margin-bottom:10px}
@@ -194,16 +204,16 @@ section { padding:100px 0;position:relative;z-index:2; }
 .price-note{margin-top:26px;padding:20px 28px;border-radius:14px;background:rgba(2,132,199,.05);border:1px solid rgba(2,132,199,.15);text-align:center;font-size:.88rem;color:var(--tm);line-height:1.8}
 .price-note strong{color:var(--pri)}
 
-/* faq */
+/* FAQ */
 .faq-wrap{max-width:740px;margin:52px auto 0;display:flex;flex-direction:column;gap:12px}
 .faq{cursor:pointer}
 .faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;font-family:'Space Grotesk',sans-serif;font-size:.97rem;font-weight:700;color:var(--tx);gap:16px}
 .faq-arr{font-size:1.1rem;color:var(--ts);transition:transform .3s;flex-shrink:0}
 .faq.open .faq-arr{transform:rotate(180deg);color:var(--pri)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s;padding:0 24px;font-size:.88rem;color:var(--tm);line-height:1.9}
-.faq.open .faq-a{max-height:320px;padding:0 24px 20px}
+.faq.open .faq-a{max-height:400px;padding:0 24px 20px}
 
-/* cta */
+/* CTA */
 .cta-sec{padding:90px 0;text-align:center;position:relative;z-index:2}
 .cta-box{max-width:680px;margin:0 auto;padding:52px 44px;background:var(--surface);border:1px solid var(--border2);border-radius:28px;box-shadow:var(--shadow-lg)}
 .cta-t{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-.02em;color:var(--tx);margin-bottom:14px;line-height:1.2}
@@ -211,7 +221,7 @@ section { padding:100px 0;position:relative;z-index:2; }
 .cta-acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .cta-contact{margin-top:24px;font-size:.76rem;color:var(--ts);line-height:1.7}
 
-/* footer */
+/* FOOTER */
 footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-index:2}
 .foot{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .foot-copy{font-size:.72rem;color:var(--ts)}
@@ -219,10 +229,10 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
 .foot-links a{font-size:.73rem;color:var(--ts);text-decoration:none;transition:color .3s}
 .foot-links a:hover{color:var(--pri)}
 
-/* responsive */
+/* RESPONSIVE */
 @media(max-width:900px){
-  .pain-grid,.ben-grid{grid-template-columns:1fr}
-  .what-grid{grid-template-columns:1fr 1fr}
+  .opp-grid{grid-template-columns:1fr;gap:32px}
+  .sol-grid{grid-template-columns:1fr 1fr}
   .plans-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
   .hero-stats .stat{min-width:calc(50% - 1px)}
   .nav-links{display:none}
@@ -231,19 +241,20 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
 }
 @media(max-width:600px){
   section{padding:72px 0}
-  .what-grid{grid-template-columns:1fr}
-  .hero h1{font-size:clamp(2rem,9vw,3rem)}
+  .sol-grid{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(1.9rem,8vw,2.8rem)}
+  .hero h2{font-size:1rem}
   .hero-btns{flex-direction:column;align-items:center}
   .btn-wa,.btn-scroll{width:100%;max-width:320px;justify-content:center}
   .hero-stats{flex-direction:column}
   .hero-stats .stat{border-right:none;border-bottom:1px solid var(--border)}
   .hero-stats .stat:last-child{border-bottom:none}
-  .steps-line{left:22px}
-  .step-n{width:44px;height:44px;min-width:44px;font-size:1rem}
-  .step{gap:16px}
   .cta-box{padding:32px 18px}
   .sec-h{font-size:clamp(1.5rem,7vw,2.2rem)}
   .plans-grid{max-width:100%}
+  .opp-loss-grid{grid-template-columns:1fr}
+  .roi-row{flex-direction:column;gap:12px}
+  .tech-inner{flex-direction:column;gap:12px}
 }
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
@@ -266,19 +277,14 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
   <button class="theme-toggle" id="themeBtn" aria-label="Cambiar tema"></button>
 </div>
 
+<!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="logo-wrap">
       <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
         <defs>
-          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#0ea5e9"/>
-            <stop offset="100%" stop-color="#4f46e5"/>
-          </linearGradient>
-          <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.25"/>
-            <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.08"/>
-          </linearGradient>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#4f46e5"/></linearGradient>
+          <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.25"/><stop offset="100%" stop-color="#4f46e5" stop-opacity="0.08"/></linearGradient>
         </defs>
         <circle cx="20" cy="20" r="19" fill="url(#lg2)" stroke="url(#lg1)" stroke-width="1.2"/>
         <path d="M4 22 Q8 14, 13 18 Q18 22, 22 16 Q27 10, 32 15 Q36 18, 38 16" stroke="url(#lg1)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -287,266 +293,369 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
       </svg>
       <div>
         <div class="logo-text">TSUNAMI</div>
-        <span class="logo-sub">Automatización Digital</span>
+        <span class="logo-sub">Soluciones</span>
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#que-hacemos">Qué hacemos</a></li>
-      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#problema">El problema</a></li>
+      <li><a href="#solucion">Solución</a></li>
       <li><a href="#planes">Planes</a></li>
       <li><a href="#preguntas">FAQ</a></li>
-      <li><a href="https://wa.me/56944532346" class="nav-cta">📲 Hablar ahora</a></li>
+      <li><a href="https://wa.me/56944532346" class="nav-cta">📲 Agendar llamada</a></li>
     </ul>
     <button class="hamburger" id="hbg" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="mobile-menu" id="mmenu">
-  <a href="#que-hacemos" onclick="closeMenu()">Qué hacemos</a>
-  <a href="#como-funciona" onclick="closeMenu()">Cómo funciona</a>
+  <a href="#problema" onclick="closeMenu()">El problema</a>
+  <a href="#solucion" onclick="closeMenu()">Solución</a>
   <a href="#planes" onclick="closeMenu()">Planes y precios</a>
   <a href="#preguntas" onclick="closeMenu()">Preguntas frecuentes</a>
-  <a href="https://wa.me/56944532346" style="color:#25d366;font-weight:700">📲 +56 9 4453 2346</a>
+  <a href="https://wa.me/56944532346" style="color:#25d366;font-weight:700" onclick="closeMenu()">📲 +56 9 4453 2346</a>
 </div>
 
-<!-- HERO -->
+
+<!-- ═══════════════════════════════════════
+     HERO — ROI + AHORRO DE TIEMPO
+═══════════════════════════════════════ -->
 <section class="hero" style="position:relative">
   <div class="container">
     <div class="hero-inner">
-      <div class="hero-badge"><span class="badge-dot"></span>🇨🇱 Hecho para negocios chilenos</div>
-      <h1>Tu negocio atiende,<br/>cobra y vende solo.<br/><span class="grad">Tú descansas tranquilo.</span></h1>
-      <p class="hero-p">Imagina que cada cliente que te escribe por WhatsApp recibe respuesta en menos de 1 segundo, las 24 horas, los 7 días. Solo. Sin que tú hagas nada. Eso es lo que construimos para tu negocio.</p>
+      <div class="hero-badge"><span class="badge-dot"></span>🇨🇱 Automatización para pymes chilenas</div>
+
+      <h1>
+        Expande tu horario comercial a 24/7<br/>
+        <span class="grad">sin contratar a nadie.</span>
+      </h1>
+
+      <h2>
+        Automatizamos tu WhatsApp con Inteligencia Artificial para que tu negocio atienda, cobre y venda mientras tú duermes, descansas o estás de vacaciones. La inversión se paga sola con 1 o 2 ventas recuperadas al mes.
+      </h2>
+
       <div class="hero-btns">
-        <a href="https://wa.me/56944532346?text=Hola!%20Quiero%20saber%20cómo%20automatizar%20mi%20negocio" class="btn-wa">
+        <a href="https://wa.me/56944532346?text=Hola!%20Me%20interesa%20saber%20cómo%20automatizar%20mi%20negocio%20con%20Tsunami" class="btn-wa">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.116 1.515 5.851L0 24l6.335-1.492A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.669-.502-5.207-1.381l-.374-.222-3.873.912.946-3.773-.243-.389A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Quiero saber más
+          Agendar diagnóstico gratuito
         </a>
-        <a href="#como-funciona" class="btn-scroll">¿Cómo funciona? ↓</a>
+        <a href="#planes" class="btn-scroll">Ver planes y precios ↓</a>
       </div>
+
       <div class="hero-stats">
-        <div class="stat"><div class="stat-v">24/7</div><div class="stat-l">Atención automática</div></div>
-        <div class="stat"><div class="stat-v">&lt;1 seg</div><div class="stat-l">Respuesta al cliente</div></div>
-        <div class="stat"><div class="stat-v">100%</div><div class="stat-l">Cobros automáticos</div></div>
-        <div class="stat"><div class="stat-v">0</div><div class="stat-l">Estrés para ti</div></div>
+        <div class="stat"><div class="stat-v">24/7</div><div class="stat-l">Horario comercial</div></div>
+        <div class="stat"><div class="stat-v">&lt;3 seg</div><div class="stat-l">Respuesta con IA</div></div>
+        <div class="stat"><div class="stat-v">$0</div><div class="stat-l">Costo en RRHH</div></div>
+        <div class="stat"><div class="stat-v">ROI</div><div class="stat-l">Desde el mes 1</div></div>
       </div>
     </div>
   </div>
   <div class="scroll-ind"><div class="scroll-mouse"><div class="scroll-dot"></div></div><span class="scroll-lbl">Descubre más</span></div>
 </section>
 
-<!-- PROBLEMAS -->
-<section>
+
+<!-- TECH STRIP -->
+<div class="tech-strip rev">
   <div class="container">
-    <div class="sec-label rev"><span class="badge-dot"></span> ¿Te suena familiar?</div>
-    <h2 class="sec-h rev d1">Estos 4 problemas desaparecen<br/><em>cuando todo se automatiza.</em></h2>
-    <p class="sec-p rev d2">Si tu negocio depende de que tú respondas cada mensaje, estás perdiendo ventas y ganando estrés.</p>
-    <div class="pain-grid">
-      <div class="card pain-card rev d1" data-tilt>
-        <span class="pain-em">📱</span>
-        <div class="pain-t">"Me paso todo el día pegado al celular"</div>
-        <div class="pain-d">Respondes las mismas preguntas una y otra vez. No puedes descansar porque si no contestas, el cliente se va. <span class="pain-sol">El bot responde por ti en menos de 1 segundo, a cualquier hora.</span></div>
+    <div class="tech-inner">
+      <span class="tech-lbl">Stack que usamos:</span>
+      <div class="tech-logos">
+        <div class="tech-item"><span>💬</span> WhatsApp Cloud API</div>
+        <div class="tech-item"><span>⚡</span> Make.com</div>
+        <div class="tech-item"><span>🧠</span> Gemini / ChatGPT</div>
+        <div class="tech-item"><span>🗄️</span> Supabase</div>
+        <div class="tech-item"><span>🚀</span> Vercel</div>
+        <div class="tech-item"><span>📄</span> DocuGenerator</div>
       </div>
-      <div class="card pain-card rev d2" data-tilt>
-        <span class="pain-em">😩</span>
-        <div class="pain-t">"Pierdo clientes porque no alcanzo a responder"</div>
-        <div class="pain-d">Un cliente que espera más de 5 minutos se va a la competencia. Sobre todo de noche o los fines de semana. <span class="pain-sol">El sistema responde a las 3 de la mañana, los domingos, los feriados.</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PROBLEMA — EL COSTO DE OPORTUNIDAD
+═══════════════════════════════════════ -->
+<section id="problema" class="opp-section">
+  <div class="container">
+    <div class="sec-label rev"><span class="badge-dot"></span> El costo de oportunidad</div>
+    <h2 class="sec-h rev d1">Cada mensaje sin responder<br/><em>es una venta que se pierde para siempre.</em></h2>
+
+    <div class="opp-grid">
+      <div class="opp-visual rev d2" data-tilt>
+        <div class="opp-scenario">
+          <strong>Viernes, 21:47 hrs.</strong> Un cliente potencial te escribe:<br/><br/>
+          <em>"Hola, ¿atienden mañana? Quiero agendar para las 10:00"</em><br/><br/>
+          Tú estás cenando con tu familia. No ves el mensaje hasta las 23:00. Le contestas. Pero el cliente ya le escribió a la competencia — que sí le respondió al tiro.<br/><br/>
+          <strong>Esa venta de $30.000 se fue.</strong> Y no la vas a recuperar.
+        </div>
+        <div class="opp-time">
+          <div class="opp-time-v">68%</div>
+          <div class="opp-time-l">de los clientes no esperan más de 10 minutos</div>
+        </div>
+        <div class="opp-loss-grid">
+          <div class="opp-loss">
+            <div class="opp-loss-v">~$240.000</div>
+            <div class="opp-loss-l">pérdida mensual estimada<br/>(8 ventas perdidas × $30.000)</div>
+          </div>
+          <div class="opp-loss">
+            <div class="opp-loss-v">~$2.880.000</div>
+            <div class="opp-loss-l">pérdida anual estimada<br/>en ventas no atendidas</div>
+          </div>
+        </div>
       </div>
-      <div class="card pain-card rev d3" data-tilt>
-        <span class="pain-em">🧾</span>
-        <div class="pain-t">"Cobrar es un desorden total"</div>
-        <div class="pain-d">Mandas el link de pago a mano, no sabes quién pagó y quién no, y a veces se te olvidan los cobros. <span class="pain-sol">El sistema genera el link, lo envía, detecta el pago y te avisa solo.</span></div>
-      </div>
-      <div class="card pain-card rev d4" data-tilt>
-        <span class="pain-em">🤯</span>
-        <div class="pain-t">"No sé cuánto vendí este mes"</div>
-        <div class="pain-d">Todo es un caos: cuadernos, mensajes perdidos, transferencias sin marcar. <span class="pain-sol">El panel muestra en tiempo real cuánto vendiste, qué está pendiente y quién te debe.</span></div>
+
+      <div class="opp-text rev d3">
+        <h3>No es que tu negocio sea malo. Es que tiene un horario limitado.</h3>
+        <p>Tu negocio funciona bien de lunes a viernes de 9 a 18. Pero <span class="highlight">el 43% de los mensajes de WhatsApp llegan fuera de horario comercial</span>: de noche, sábados, domingos y feriados.</p>
+        <p>Cada uno de esos mensajes sin respuesta es plata que se va. Y contratar a alguien para cubrir esas horas cuesta un sueldo completo: entre $500.000 y $700.000 al mes más cargas.</p>
+        <p>¿Y si pudieras cubrir ese <span class="highlight">horario fantasma</span> automáticamente, sin contratar a nadie, por una fracción de lo que cuesta un empleado?</p>
+        <div class="opp-cta-line">
+          💡 Eso es exactamente lo que hace Tsunami Soluciones. No vendemos "bots". <strong>Vendemos la expansión de tu horario comercial a costo cero en recursos humanos.</strong>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUÉ HACEMOS -->
-<section id="que-hacemos" style="background:var(--surface2)">
-  <div class="container">
-    <div style="text-align:center">
-      <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Qué construimos para ti</div>
-      <h2 class="sec-h rev d1" style="text-align:center">Un sistema completo que trabaja<br/><em>por ti las 24 horas del día.</em></h2>
-      <p class="sec-p rev d2" style="margin:0 auto;text-align:center">No es una app genérica. Es un sistema hecho a medida para tu negocio, con tu logo, tus servicios y tus precios.</p>
-    </div>
-    <div class="what-grid">
-      <div class="card what-card rev d1" data-tilt><div class="wi wi-g">💬</div><div class="what-t">Bot de WhatsApp inteligente</div><div class="what-d">Un asistente que responde tu WhatsApp: muestra servicios, precios, recopila datos del cliente y guía la conversación hasta el pago. Funciona solo, sin que tú hagas nada.</div></div>
-      <div class="card what-card rev d2" data-tilt><div class="wi wi-b">💳</div><div class="what-t">Cobros automáticos con MercadoPago</div><div class="what-d">Genera links de pago con el monto exacto y los envía al cliente por WhatsApp. Acepta tarjeta, débito y transferencia. Cuando paga, la plata va directo a tu cuenta.</div></div>
-      <div class="card what-card rev d3" data-tilt><div class="wi wi-p">📊</div><div class="what-t">Panel de administración</div><div class="what-d">Una página web privada donde ves todo: pedidos del día, quién pagó, qué está pendiente, cuánto llevas vendido. Desde tu celular o computador en tiempo real.</div></div>
-      <div class="card what-card rev d1" data-tilt><div class="wi wi-c">🔔</div><div class="what-t">Notificaciones en tiempo real</div><div class="what-d">Cada vez que un cliente paga, te llega una notificación a tu WhatsApp personal con todos los detalles: quién pagó, qué compró y cuánto. Sin revisar nada.</div></div>
-      <div class="card what-card rev d2" data-tilt><div class="wi wi-o">🌐</div><div class="what-t">Página web de tu negocio</div><div class="what-d">Creamos una landing page profesional con tu marca, servicios y un botón directo a WhatsApp. Se ve perfecta en celular y computador. Ideal para compartir en redes.</div></div>
-      <div class="card what-card rev d3" data-tilt><div class="wi wi-y">🧠</div><div class="what-t">Inteligencia Artificial de respaldo</div><div class="what-d">Si el cliente hace una pregunta que el bot no tiene programada, la IA genera una respuesta natural basada en tu negocio. El cliente nunca se queda sin respuesta.</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- CÓMO FUNCIONA -->
-<section id="como-funciona">
+<!-- ═══════════════════════════════════════
+     SOLUCIÓN — EL VENDEDOR AUTÓNOMO
+═══════════════════════════════════════ -->
+<section id="solucion">
   <div class="container">
     <div style="text-align:center">
-      <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Paso a paso</div>
-      <h2 class="sec-h rev d1" style="text-align:center">Así funciona desde que<br/><em>el cliente te escribe.</em></h2>
-      <p class="sec-p rev d2" style="margin:0 auto;text-align:center">Todo pasa automáticamente. Tú no tienes que hacer absolutamente nada.</p>
+      <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Tu Vendedor Autónomo</div>
+      <h2 class="sec-h rev d1" style="text-align:center">Un sistema con IA que atiende,<br/><em>cobra y te avisa cuando la plata ya entró.</em></h2>
+      <p class="sec-p rev d2" style="margin:0 auto;text-align:center">Nosotros construimos un asistente inteligente que trabaja por ti en WhatsApp. No es un chatbot genérico: es un sistema hecho a medida con tu tono, tus servicios y tus precios.</p>
     </div>
-    <div class="steps rev d2">
-      <div class="steps-line"></div>
-      <div class="step"><div class="step-n">1</div><div><div class="step-t">El cliente te escribe por WhatsApp</div><div class="step-d">La persona ve tu número en redes sociales, Google o tu página web y te escribe. Puede ser a las 3 de la mañana un domingo. No importa.</div></div></div>
-      <div class="step"><div class="step-n">2</div><div><div class="step-t">El bot le responde al instante</div><div class="step-d">En menos de 1 segundo el sistema le envía un saludo personalizado con el nombre de tu negocio y un menú con todas las opciones disponibles.</div></div></div>
-      <div class="step"><div class="step-n">3</div><div><div class="step-t">El cliente ve los servicios y precios</div><div class="step-d">El bot le muestra tus servicios con sus precios. El cliente elige el que quiere y el bot le pide los datos necesarios (nombre, RUT, dirección, lo que tú necesites saber).</div></div></div>
-      <div class="step"><div class="step-n">4</div><div><div class="step-t">Se genera el cobro automáticamente</div><div class="step-d">El sistema crea un link de pago de MercadoPago con el monto exacto. El cliente lo recibe en el mismo chat. Puede pagar con tarjeta, débito o transferencia.</div></div></div>
-      <div class="step"><div class="step-n">5</div><div><div class="step-t">El cliente paga y recibe confirmación</div><div class="step-d">Cuando el pago se completa, el sistema le envía un mensaje de confirmación al cliente. Todo automático. El cliente queda satisfecho y tú no moviste un dedo.</div></div></div>
-      <div class="step step-ok"><div class="step-n">✓</div><div><div class="step-t">Tú recibes la notificación y la plata</div><div class="step-d">Te llega un mensaje a tu WhatsApp personal con todos los datos. La plata entra a tu cuenta de MercadoPago. <strong>Tú no hiciste absolutamente nada.</strong></div></div></div>
+
+    <div class="sol-grid">
+      <div class="card sol-card rev d1" data-tilt>
+        <div class="sol-step-num">1</div>
+        <span class="sol-em">💬</span>
+        <div class="sol-t">Atiende de forma natural con IA</div>
+        <div class="sol-d">El sistema conversa con tus clientes como lo harías tú: responde preguntas, muestra servicios, entrega precios y agenda citas. Si el cliente pregunta algo inesperado, la Inteligencia Artificial genera una respuesta coherente. La mayoría no nota que no eres tú.</div>
+      </div>
+      <div class="card sol-card rev d2" data-tilt>
+        <div class="sol-step-num">2</div>
+        <span class="sol-em">💳</span>
+        <div class="sol-t">Cobra automáticamente por WhatsApp</div>
+        <div class="sol-d">Cuando el cliente elige un servicio, el sistema genera un link de pago de MercadoPago con el monto exacto y lo envía al chat. Acepta tarjeta de crédito, débito y transferencia. Sin intermediarios: la plata va directo a tu cuenta.</div>
+      </div>
+      <div class="card sol-card rev d3" data-tilt>
+        <div class="sol-step-num">3</div>
+        <span class="sol-em">🔔</span>
+        <div class="sol-t">Te avisa solo cuando hay que hacer algo</div>
+        <div class="sol-d">No te molesta con cada mensaje. Filtra los curiosos, atiende las consultas y solo te envía una notificación cuando el pago se confirmó y el cliente está listo. Tú despiertas, abres el celular y la plata ya está en tu cuenta.</div>
+      </div>
+      <div class="card sol-card rev d1" data-tilt>
+        <div class="sol-step-num">4</div>
+        <span class="sol-em">📊</span>
+        <div class="sol-t">Panel privado con todos los datos</div>
+        <div class="sol-d">Un dashboard web exclusivo donde ves todo: ventas del día, clientes atendidos, pagos pendientes, estadísticas de crecimiento. Accesible desde tu celular o computador. Construido en Supabase + Vercel para que sea rápido y seguro.</div>
+      </div>
+      <div class="card sol-card rev d2" data-tilt>
+        <div class="sol-step-num">5</div>
+        <span class="sol-em">📄</span>
+        <div class="sol-t">Contratos y documentos automáticos</div>
+        <div class="sol-d">Con DocuGenerator, el sistema puede generar contratos, comprobantes o fichas de inscripción automáticamente con los datos del cliente. Se envían por WhatsApp o email sin que tú intervengas. Ideal para clínicas, academias y servicios profesionales.</div>
+      </div>
+      <div class="card sol-card rev d3" data-tilt>
+        <div class="sol-step-num">6</div>
+        <span class="sol-em">⚡</span>
+        <div class="sol-t">Automatizaciones personalizadas</div>
+        <div class="sol-d">Con Make.com conectamos tu sistema a lo que necesites: Google Calendar, Sheets, CRM, email marketing, base de datos. Todo fluye automáticamente. Cada nuevo cliente genera una cadena de acciones sin intervención manual.</div>
+      </div>
     </div>
+
+    <!-- CHAT DEMO -->
     <div class="chat-box rev">
-      <div class="chat-header"><div class="chat-avatar">🤖</div><div><div class="chat-name">Tu Negocio — Bot automático</div><div class="chat-status">● En línea ahora</div></div></div>
+      <div class="chat-header"><div class="chat-avatar">🤖</div><div><div class="chat-name">Tu Negocio — Vendedor Autónomo</div><div class="chat-status">● En línea — Viernes 22:15</div></div></div>
       <div class="msgs">
-        <div class="msg mc"><span class="msg-lbl">Cliente</span>Hola, ¿cuánto cuesta el corte de pelo?</div>
-        <div class="msg mb"><span class="msg-lbl">Tu Bot</span>¡Hola! 👋 Bienvenido a tu negocio. Estos son nuestros servicios:<br/><br/>1️⃣ Corte simple — $6.990<br/>2️⃣ Corte + lavado — $9.990<br/>3️⃣ Tintura completa — $22.990<br/><br/>¿Cuál te interesa? 😊</div>
-        <div class="msg mc"><span class="msg-lbl">Cliente</span>El 2 por favor</div>
-        <div class="msg mb"><span class="msg-lbl">Tu Bot</span>Perfecto ✨ Corte + lavado por $9.990. ¿Me das tu nombre y qué día prefieres? (lunes a sábado)</div>
-        <div class="msg mc"><span class="msg-lbl">Cliente</span>María González, el jueves</div>
-        <div class="msg mb"><span class="msg-lbl">Tu Bot</span>Listo María 💙 Tu cita es el jueves. Para confirmar, aquí tienes tu link de pago:<br/><br/>🔗 mercadopago.cl/pago/corte-9990<br/><br/>Puedes pagar con tarjeta, débito o transferencia.</div>
-        <div class="msg mc"><span class="msg-lbl">Cliente</span>[Paga con su tarjeta]</div>
-        <div class="msg mb"><span class="msg-lbl">Tu Bot</span>✅ ¡Pago confirmado! Gracias María. Tu cita del jueves está reservada. ¡Te esperamos! 😊</div>
+        <div class="msg mc"><span class="msg-lbl">Cliente</span>Hola, ¿atienden mañana sábado?</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>¡Hola! 👋 Sí, atendemos mañana de 9:00 a 14:00. ¿Qué servicio te interesa?<br/><br/>1️⃣ Consulta general — $25.000<br/>2️⃣ Evaluación completa — $45.000<br/>3️⃣ Sesión de seguimiento — $18.000</div>
+        <div class="msg mc"><span class="msg-lbl">Cliente</span>La evaluación completa, ¿hay hora a las 10?</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>Perfecto ✨ Tenemos disponibilidad a las 10:00. ¿Me confirmas tu nombre completo y RUT para agendar?</div>
+        <div class="msg mc"><span class="msg-lbl">Cliente</span>Andrea Muñoz, 18.432.567-K</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>Listo Andrea 💙 Tu evaluación queda agendada para mañana sábado a las 10:00. Para confirmar, aquí va tu link de pago por $45.000:<br/><br/>🔗 mpago.la/evaluacion-45000<br/><br/>Puedes pagar con tarjeta, débito o transferencia.</div>
+        <div class="msg mc"><span class="msg-lbl">Cliente</span>[Paga con débito]</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>✅ ¡Pago confirmado, Andrea! Tu cita queda reservada: sábado 10:00 hrs. Te esperamos 😊</div>
       </div>
-      <div class="chat-note">👆 Todo esto pasó sin que tú tocases el celular. La plata ya está en tu cuenta.</div>
+      <div class="chat-note">💤 Todo esto pasó un viernes a las 22:15 mientras tú dormías. La plata ya está en tu cuenta de MercadoPago y tú te enteraste al despertar.</div>
+    </div>
+
+    <!-- ROI CALCULATOR -->
+    <div class="roi-box rev">
+      <div class="roi-t">📊 ¿Se paga solo? Saca la cuenta:</div>
+      <div class="roi-row">
+        <div class="roi-metric"><div class="roi-metric-v">$45.000</div><div class="roi-metric-l">Valor promedio<br/>de tu servicio</div></div>
+        <div class="roi-metric"><div class="roi-metric-v">×2</div><div class="roi-metric-l">Ventas recuperadas<br/>al mes en horario muerto</div></div>
+        <div class="roi-metric"><div class="roi-metric-v">= $90.000</div><div class="roi-metric-l">Ingreso extra<br/>mensual mínimo</div></div>
+      </div>
+      <div class="roi-conclusion">
+        Con solo <strong>2 ventas recuperadas al mes</strong> que antes se perdían (noches, fines de semana, feriados), el Plan Básico <strong>se paga solo y te queda ganancia</strong>. Imagina si son 5 o 10 ventas más.
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BENEFICIOS -->
-<section id="beneficios" style="background:var(--surface2)">
-  <div class="container">
-    <div style="text-align:center">
-      <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Beneficios para ti</div>
-      <h2 class="sec-h rev d1" style="text-align:center">Lo que realmente cambia<br/><em>cuando tu negocio funciona solo.</em></h2>
-    </div>
-    <div class="ben-grid">
-      <div class="card ben-card rev d1" data-tilt><span class="ben-em">😴</span><div class="ben-t">Dormís tranquilo, vendés igual</div><div class="ben-d">A las 2 de la mañana, mientras duermes, un cliente puede ver tus servicios, elegir, pagar y recibir confirmación. Te enteras al despertar.</div></div>
-      <div class="card ben-card rev d2" data-tilt><span class="ben-em">🏖️</span><div class="ben-t">Vacaciones sin cerrar el negocio</div><div class="ben-d">¿Te quieres ir una semana a la playa? Tu negocio sigue atendiendo, cobrando y organizando todo. Sin dejarle encargado a nadie.</div></div>
-      <div class="card ben-card rev d3" data-tilt><span class="ben-em">📈</span><div class="ben-t">Más ventas, menos esfuerzo</div><div class="ben-d">Al responder al instante, ningún cliente se va por demora. Se reporta un aumento promedio del 40% en conversiones solo por la velocidad de respuesta.</div></div>
-      <div class="card ben-card rev d1" data-tilt><span class="ben-em">🧘</span><div class="ben-t">Cero estrés con los cobros</div><div class="ben-d">No más "te mando la transferencia después", ni perseguir clientes. El sistema cobra antes de confirmar. Sin pago, no hay servicio.</div></div>
-      <div class="card ben-card rev d2" data-tilt><span class="ben-em">👁️</span><div class="ben-t">Control total de tu negocio</div><div class="ben-d">Cuántas ventas hoy, cuánta plata entró, qué está pendiente. Todo desde tu celular en tiempo real. Sin cuadernos, sin caos.</div></div>
-      <div class="card ben-card rev d3" data-tilt><span class="ben-em">🤝</span><div class="ben-t">Tu cliente queda feliz</div><div class="ben-d">Respuesta inmediata, pago fácil por WhatsApp, confirmación al tiro. Una experiencia profesional que genera confianza y hace que vuelvan.</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- PLANES -->
-<section id="planes">
+<!-- ═══════════════════════════════════════
+     PLANES — 3 NIVELES
+═══════════════════════════════════════ -->
+<section id="planes" style="background:var(--surface2)">
   <div class="container">
     <div style="text-align:center">
       <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Planes y precios</div>
-      <h2 class="sec-h rev d1" style="text-align:center">Precios claros, sin sorpresas.<br/><em>Elige el que calce con tu negocio.</em></h2>
-      <p class="sec-p rev d2" style="margin:0 auto;text-align:center">Todos los planes incluyen el sistema completo funcionando. Las agencias del mercado cobran 2 a 5 veces más por lo mismo.</p>
+      <h2 class="sec-h rev d1" style="text-align:center">Tres niveles de automatización.<br/><em>Uno está hecho para tu negocio.</em></h2>
+      <p class="sec-p rev d2" style="margin:0 auto;text-align:center">Setup único + mensualidad por infraestructura. Sin contrato de permanencia. Si no te sirve, cancelas y listo.</p>
     </div>
+
     <div class="plans-grid">
+      <!-- BÁSICO -->
       <div class="card plan rev d1" data-tilt>
         <div class="plan-inner">
-          <div class="plan-tier">Para emprendedores o negocios pequeños</div>
-          <div class="plan-name">🟢 Plan Starter</div>
+          <div class="plan-tier">Para filtrar y organizar consultas</div>
+          <div class="plan-name">🟢 Plan Básico</div>
+          <div class="plan-pitch">"Tu celular deja de sonar por consultas repetitivas."</div>
           <div class="plan-price-area">
-            <div class="plan-setup-lbl">Pago único de implementación</div>
-            <div class="plan-setup-v">$149.990</div>
-            <div class="plan-monthly">+ $34.990 al mes</div>
+            <div class="plan-setup-lbl">Setup — ingeniería e implementación</div>
+            <div class="plan-setup-v">$190.000</div>
+            <div class="plan-monthly">+ $45.000 al mes</div>
           </div>
           <ul class="plan-feats">
-            <li><span class="ck">✓</span>Bot de WhatsApp disponible 24/7</li>
-            <li><span class="ck">✓</span>Hasta 10 servicios con precios</li>
-            <li><span class="ck">✓</span>Cobros automáticos con MercadoPago</li>
-            <li><span class="ck">✓</span>Panel de administración básico</li>
-            <li><span class="ck">✓</span>1 página web de tu negocio</li>
+            <li><span class="ck">✓</span>Bot de WhatsApp activo 24/7</li>
+            <li><span class="ck">✓</span>Flujo de opciones con menú interactivo</li>
+            <li><span class="ck">✓</span>Respuestas automáticas a preguntas frecuentes</li>
+            <li><span class="ck">✓</span>Alertas básicas a tu WhatsApp personal</li>
             <li><span class="ck">✓</span>Servidor y base de datos incluidos</li>
-            <li><span class="ck">✓</span>Notificaciones a tu WhatsApp</li>
+            <li><span class="ck">✓</span>1 página web de tu negocio</li>
             <li><span class="ck">✓</span>Soporte por chat 30 días</li>
             <li><span class="ck">✓</span>Listo en 7 a 14 días hábiles</li>
           </ul>
-          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Starter')">Quiero el Plan Starter</button>
+          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Básico%20Filtro%2024/7')">Quiero el Plan Básico</button>
         </div>
       </div>
+
+      <!-- PRO — DESTACADO -->
       <div class="card plan pop rev d2" data-tilt>
-        <div class="plan-badge">⭐ El más elegido</div>
+        <div class="plan-badge">⭐ Vendedor Autónomo — el más elegido</div>
         <div class="plan-inner">
-          <div class="plan-tier">Para PYMEs activas con varios servicios</div>
-          <div class="plan-name">🔵 Plan Profesional</div>
+          <div class="plan-tier">Para vender y cobrar automáticamente</div>
+          <div class="plan-name">🔵 Plan Pro</div>
+          <div class="plan-pitch">"Ganas dinero mientras duermes o descansas el fin de semana."</div>
           <div class="plan-price-area">
-            <div class="plan-setup-lbl">Pago único de implementación</div>
-            <div class="plan-setup-v">$349.990</div>
-            <div class="plan-monthly">+ $64.990 al mes</div>
+            <div class="plan-setup-lbl">Setup — ingeniería e implementación</div>
+            <div class="plan-setup-v">$390.000</div>
+            <div class="plan-monthly">+ $85.000 al mes</div>
           </div>
           <ul class="plan-feats">
-            <li><span class="ck">✓</span>Todo lo del Starter, más:</li>
-            <li><span class="ck">✓</span>Bot en WhatsApp + Facebook Messenger</li>
-            <li><span class="ck">✓</span>Servicios ilimitados (sin tope)</li>
-            <li><span class="ck">✓</span>Sistema de abonos (ej: 30% ahora, 70% después)</li>
-            <li><span class="ck">✓</span>Panel avanzado con estadísticas y gráficos</li>
+            <li><span class="ck">✓</span>Todo lo del Básico, más:</li>
+            <li><span class="ck">✓</span>IA conversacional (Gemini/ChatGPT)</li>
+            <li><span class="ck">✓</span>Respuestas dinámicas y naturales</li>
+            <li><span class="ck">✓</span>Cobros automáticos con MercadoPago</li>
+            <li><span class="ck">✓</span>Link de pago generado en el chat</li>
+            <li><span class="ck">✓</span>Notificación de pago confirmado en tiempo real</li>
+            <li><span class="ck">✓</span>Panel de administración con métricas</li>
             <li><span class="ck">✓</span>Hasta 3 páginas web</li>
-            <li><span class="ck">✓</span>Inteligencia Artificial para preguntas abiertas</li>
             <li><span class="ck">✓</span>Soporte prioritario 60 días</li>
           </ul>
-          <button class="plan-btn btn-fill" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Profesional')">Quiero el Profesional →</button>
+          <button class="plan-btn btn-fill" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Pro%20Vendedor%20Autónomo')">Quiero el Plan Pro →</button>
         </div>
       </div>
+
+      <!-- PREMIUM -->
       <div class="card plan rev d3" data-tilt>
         <div class="plan-inner">
-          <div class="plan-tier">Para empresas con alto volumen o staff</div>
-          <div class="plan-name">🟣 Plan Empresa</div>
+          <div class="plan-tier">Negocio en piloto automático completo</div>
+          <div class="plan-name">🟣 Plan Premium</div>
+          <div class="plan-pitch">"Tu negocio en piloto automático, desde la venta hasta el contrato."</div>
           <div class="plan-price-area">
-            <div class="plan-setup-lbl">Implementación personalizada desde</div>
-            <div class="plan-setup-v">$749.990</div>
-            <div class="plan-monthly">+ desde $119.990 al mes</div>
+            <div class="plan-setup-lbl">Setup — Ecosistema Tsunami completo</div>
+            <div class="plan-setup-v">$790.000</div>
+            <div class="plan-monthly">+ $180.000 al mes</div>
           </div>
           <ul class="plan-feats">
-            <li><span class="ck">✓</span>Todo lo del Profesional, más:</li>
-            <li><span class="ck">✓</span>Múltiples bots y canales de atención</li>
+            <li><span class="ck">✓</span>Todo lo del Pro, más:</li>
+            <li><span class="ck">✓</span>IA avanzada con contexto extendido</li>
+            <li><span class="ck">✓</span>Panel de Admin privado (Supabase + Vercel)</li>
+            <li><span class="ck">✓</span>Contratos automáticos con DocuGenerator</li>
+            <li><span class="ck">✓</span>Sincronización con CRM</li>
+            <li><span class="ck">✓</span>Automatizaciones Make.com personalizadas</li>
             <li><span class="ck">✓</span>Multi-sucursal o multi-vendedor</li>
-            <li><span class="ck">✓</span>Automatizaciones avanzadas a medida</li>
             <li><span class="ck">✓</span>Páginas web ilimitadas</li>
             <li><span class="ck">✓</span>Capacitación completa a tu equipo</li>
             <li><span class="ck">✓</span>Código fuente entregado</li>
             <li><span class="ck">✓</span>Soporte dedicado 90 días</li>
           </ul>
-          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Quiero%20cotizar%20el%20Plan%20Empresa')">Solicitar cotización</button>
+          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Quiero%20cotizar%20el%20Plan%20Premium%20Ecosistema%20Tsunami')">Solicitar cotización</button>
         </div>
       </div>
     </div>
-    <div class="price-note rev"><strong>💡 ¿No estás seguro de cuál elegir?</strong> Escríbenos por WhatsApp, cuéntanos tu negocio y te recomendamos el plan ideal. Sin compromiso, sin presión.</div>
+
+    <div class="price-note rev">
+      <strong>💰 Comparemos:</strong> Contratar a alguien para cubrir horario nocturno = ~$600.000/mes + cargas. El Plan Pro cuesta <strong>$85.000/mes</strong>, trabaja 24/7 incluyendo feriados, no se enferma, no pide vacaciones y no llega tarde. La diferencia es evidente.
+    </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="preguntas" style="background:var(--surface2)">
+
+<!-- ═══════════════════════════════════════
+     FAQ — REBATIENDO OBJECIONES
+═══════════════════════════════════════ -->
+<section id="preguntas">
   <div class="container">
     <div style="text-align:center">
       <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Preguntas frecuentes</div>
-      <h2 class="sec-h rev d1" style="text-align:center">Respuestas claras<br/><em>a lo que más nos preguntan.</em></h2>
+      <h2 class="sec-h rev d1" style="text-align:center">Objeciones honestas,<br/><em>respuestas directas.</em></h2>
     </div>
     <div class="faq-wrap">
-      <div class="card faq rev d1"><div class="faq-q">¿Necesito saber de tecnología para usar esto?<span class="faq-arr">▼</span></div><div class="faq-a">Para nada. Nosotros nos encargamos de todo lo técnico: crear el bot, conectar los pagos, montar el panel y la página web. Tú solo nos dices qué servicios ofreces y a qué precios. El panel es tan fácil como usar tu WhatsApp. Si sabes usar un celular, puedes usarlo.</div></div>
-      <div class="card faq rev d2"><div class="faq-q">¿Cuánto tiempo toma tener el sistema funcionando?<span class="faq-arr">▼</span></div><div class="faq-a">El Plan Starter queda listo entre 7 y 14 días hábiles. El Profesional entre 14 y 21 días. El Plan Empresa depende de lo que necesites, pero generalmente entre 3 y 5 semanas. Durante todo el proceso nos mantenemos en contacto por WhatsApp para que veas cómo avanza.</div></div>
-      <div class="card faq rev d3"><div class="faq-q">¿El bot suena robótico? ¿Los clientes van a saber que no soy yo?<span class="faq-arr">▼</span></div><div class="faq-a">El bot se configura con el tono y estilo de tu negocio. Puede ser formal, cercano, amigable, como tú quieras. Y si usas el Plan Profesional o Empresa, la Inteligencia Artificial genera respuestas naturales que se sienten como una conversación real. Muchos clientes ni se dan cuenta.</div></div>
-      <div class="card faq rev d4"><div class="faq-q">¿Es seguro? ¿Qué pasa con los datos de mis clientes?<span class="faq-arr">▼</span></div><div class="faq-a">Totalmente seguro. Los pagos se procesan a través de MercadoPago (la misma plataforma que usa MercadoLibre), que cumple con los estándares internacionales de seguridad bancaria. Los datos se guardan en servidores seguros con encriptación. Nosotros no vemos ni tocamos el dinero de tus ventas, va directo a tu cuenta.</div></div>
-      <div class="card faq rev d5"><div class="faq-q">¿Qué pasa si quiero agregar un servicio nuevo o cambiar un precio?<span class="faq-arr">▼</span></div><div class="faq-a">Nos escribes por WhatsApp y lo actualizamos en el día. Si tienes el Plan Profesional o Empresa, también puedes hacerlo tú mismo desde el panel de administración. Es tan fácil como llenar un formulario.</div></div>
-      <div class="card faq rev"><div class="faq-q">¿La plata de las ventas va directo a mi cuenta?<span class="faq-arr">▼</span></div><div class="faq-a">Sí. Los cobros van a tu propia cuenta de MercadoPago, vinculada a tu cuenta bancaria. La plata es tuya desde el momento en que el cliente paga. Nosotros no tocamos ni vemos tu dinero. Puedes retirar a tu banco cuando quieras.</div></div>
-      <div class="card faq rev"><div class="faq-q">¿Puedo cancelar cuando quiera?<span class="faq-arr">▼</span></div><div class="faq-a">Sí. La mensualidad no tiene contrato de permanencia. Si un mes decides que ya no lo necesitas, avisas y se suspende. No hay multas ni letras chicas. En el Plan Empresa el código fuente te lo entregamos y es tuyo para siempre.</div></div>
+
+      <div class="card faq rev d1">
+        <div class="faq-q">¿Por qué hay un costo de setup Y una mensualidad? ¿No es mucho?<span class="faq-arr">▼</span></div>
+        <div class="faq-a">Son dos cosas distintas. El <strong>setup</strong> es la ingeniería: diseñar el flujo de tu bot, configurar la IA con la información de tu negocio, integrar MercadoPago, montar el panel y las páginas web. Es trabajo hecho a medida, no es una plantilla genérica.<br/><br/>La <strong>mensualidad</strong> cubre la infraestructura que mantiene todo funcionando: servidores (Supabase, Vercel), tokens de Inteligencia Artificial (cada respuesta tiene un costo de procesamiento), la API de WhatsApp Cloud, y el soporte técnico continuo. Si algo falla a las 2 AM, nosotros nos encargamos.<br/><br/>En resumen: el setup lo pagas una vez, la mensualidad es lo que cuesta mantener un sistema funcionando 24/7. Es como la diferencia entre construir un local y pagar el arriendo con servicios incluidos.</div>
+      </div>
+
+      <div class="card faq rev d2">
+        <div class="faq-q">A mis clientes no les gustan los robots. Van a dejar de comprarme.<span class="faq-arr">▼</span></div>
+        <div class="faq-a">Esa preocupación tiene sentido si piensas en los bots antiguos que responden "No entendí tu consulta, elige una opción del 1 al 5".<br/><br/>Esto es completamente diferente. Nuestro sistema usa <strong>Inteligencia Artificial (Gemini/ChatGPT)</strong> que conversa de forma natural, entiende contexto y responde como lo haría un humano capacitado. Le configuramos el tono de tu negocio: puede ser cercano, formal, amigable — como tú atiendas.<br/><br/>Además, <strong>filtra a los curiosos y te pasa solo a los clientes VIP</strong>: los que realmente quieren comprar y están listos para pagar. Tú te ahorras 50 conversaciones inútiles al mes y solo recibes las que importan.<br/><br/>Dato: en los negocios donde lo hemos implementado, la mayoría de los clientes ni se da cuenta de que no están hablando con el dueño.</div>
+      </div>
+
+      <div class="card faq rev d3">
+        <div class="faq-q">Suena interesante, pero ¿no es muy caro para mi negocio?<span class="faq-arr">▼</span></div>
+        <div class="faq-a">Hagamos la cuenta al revés. Si tu servicio promedio vale $30.000 y el sistema te recupera <strong>2 ventas al mes</strong> que antes se perdían (un viernes de noche, un domingo, un feriado), eso son $60.000 extra de ingresos.<br/><br/>El Plan Básico cuesta $45.000/mes. <strong>Con solo 2 ventas recuperadas, ya se pagó solo y te queda ganancia.</strong><br/><br/>Ahora compara: contratar a alguien para cubrir esas horas te costaría $500.000-$700.000/mes en sueldo + cargas. El Plan Pro cuesta $85.000/mes y trabaja 24/7, incluyendo feriados, sin descanso, sin errores.<br/><br/>La pregunta real no es si es caro. Es: <strong>¿cuánta plata estás perdiendo cada mes por no tenerlo?</strong></div>
+      </div>
+
+      <div class="card faq rev d4">
+        <div class="faq-q">¿Cuánto tiempo toma tener el sistema funcionando?<span class="faq-arr">▼</span></div>
+        <div class="faq-a">Depende del plan. El <strong>Básico</strong> queda listo en 7 a 14 días hábiles. El <strong>Pro</strong> entre 14 y 21 días. El <strong>Premium</strong> entre 3 y 5 semanas dependiendo de la complejidad.<br/><br/>Durante todo el proceso te mantenemos al tanto por WhatsApp, te mostramos avances y hacemos pruebas contigo antes de activarlo con clientes reales.</div>
+      </div>
+
+      <div class="card faq rev d5">
+        <div class="faq-q">¿La plata va directo a mi cuenta? ¿Ustedes tocan el dinero?<span class="faq-arr">▼</span></div>
+        <div class="faq-a">Jamás. Los cobros van directo a <strong>tu cuenta personal de MercadoPago</strong>, vinculada a tu banco. Nosotros solo configuramos la integración técnica — no vemos, tocamos ni intermediamos tu dinero. Es como si MercadoPago fuera tu caja registradora y nosotros el que la instala.</div>
+      </div>
+
+      <div class="card faq rev">
+        <div class="faq-q">¿Puedo cancelar cuando quiera?<span class="faq-arr">▼</span></div>
+        <div class="faq-a">Sí. No hay contrato de permanencia. Si un mes decides que ya no lo necesitas, avisas y se suspende la mensualidad. Sin multas, sin penalización, sin letras chicas. En el Plan Premium, además, te entregamos el código fuente para que puedas seguir operando de forma independiente si lo deseas.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
+
+<!-- ═══════════════════════════════════════
+     CTA FINAL
+═══════════════════════════════════════ -->
 <section class="cta-sec">
   <div class="container">
     <div class="cta-box rev">
-      <div class="cta-t">¿Quieres que tu negocio trabaje solo mientras tú descansas?</div>
-      <p class="cta-d">El primer paso es una conversación. Cuéntanos qué hace tu negocio y cuántos servicios ofreces. En menos de 24 horas te enviamos una propuesta personalizada con todo incluido, sin compromiso.</p>
+      <div class="cta-t">¿Cuántas ventas perdiste<br/>este mes por no responder a tiempo?</div>
+      <p class="cta-d">El diagnóstico es gratuito. Cuéntanos qué hace tu negocio, cuántos mensajes recibes al día y qué servicios ofreces. En menos de 24 horas te enviamos una propuesta personalizada con el plan que te conviene, el ROI estimado y un demo de cómo se vería tu Vendedor Autónomo.</p>
       <div class="cta-acts">
-        <a href="https://wa.me/56944532346?text=Hola!%20Quiero%20automatizar%20mi%20negocio.%20¿Me%20pueden%20ayudar?" class="btn-wa">
+        <a href="https://wa.me/56944532346?text=Hola%20Tsunami!%20Quiero%20agendar%20un%20diagnóstico%20gratuito%20para%20mi%20negocio" class="btn-wa">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.116 1.515 5.851L0 24l6.335-1.492A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.669-.502-5.207-1.381l-.374-.222-3.873.912.946-3.773-.243-.389A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Escribir por WhatsApp
+          Agendar diagnóstico gratis
         </a>
         <a href="mailto:registrochiledoc@gmail.com" class="btn-scroll">✉️ Enviar un email</a>
       </div>
@@ -554,6 +663,7 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
@@ -568,28 +678,28 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
         </svg>
         <span class="logo-text" style="font-size:.95rem;margin-left:8px">TSUNAMI</span>
       </a>
-      <div class="foot-copy">© 2026 · Automatización digital para negocios chilenos 🇨🇱</div>
+      <div class="foot-copy">© 2026 Tsunami Soluciones · Automatización digital para pymes chilenas 🇨🇱</div>
     </div>
     <div class="foot-links">
       <a href="https://wa.me/56944532346">WhatsApp</a>
       <a href="mailto:registrochiledoc@gmail.com">Email</a>
       <a href="#planes">Ver planes</a>
-      <a href="#preguntas">Preguntas</a>
+      <a href="#preguntas">FAQ</a>
     </div>
   </div>
 </footer>
 
+
 <script>
 /* TEMA AUTO */
-const html=document.documentElement,btn=document.getElementById('themeBtn'),lbl=document.getElementById('theme-lbl');
+const html=document.documentElement,tBtn=document.getElementById('themeBtn'),tLbl=document.getElementById('theme-lbl');
 let manual=false;
-function applyTheme(d){html.dataset.theme=d?'dark':'light';lbl.textContent=d?'Noche':'Día'}
+function applyTheme(d){html.dataset.theme=d?'dark':'light';tLbl.textContent=d?'Noche':'Día'}
 function autoTheme(){if(!manual){const h=new Date().getHours();applyTheme(h>=20||h<7)}}
-autoTheme();
-setInterval(autoTheme,60000);
-btn.addEventListener('click',()=>{manual=true;applyTheme(html.dataset.theme!=='dark')});
+autoTheme();setInterval(autoTheme,60000);
+tBtn.addEventListener('click',()=>{manual=true;applyTheme(html.dataset.theme!=='dark')});
 
-/* NAV */
+/* NAV SCROLL */
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
 
@@ -606,20 +716,12 @@ document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
 const cv=document.getElementById('pts'),cx=cv.getContext('2d');
 cv.width=innerWidth;cv.height=innerHeight;
 window.addEventListener('resize',()=>{cv.width=innerWidth;cv.height=innerHeight});
-const pts=Array.from({length:60},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.4+.4,o:Math.random()*.25+.06,c:['#0ea5e9','#4f46e5','#0891b2','#10b981'][Math.floor(Math.random()*4)]}));
-function drawPts(){
-  cx.clearRect(0,0,cv.width,cv.height);
-  pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=cv.width;if(p.x>cv.width)p.x=0;if(p.y<0)p.y=cv.height;if(p.y>cv.height)p.y=0;cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=p.c;cx.globalAlpha=p.o;cx.fill();cx.globalAlpha=1});
-  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.strokeStyle=pts[i].c;cx.globalAlpha=(1-d/100)*.05;cx.lineWidth=.5;cx.stroke();cx.globalAlpha=1}}
-  requestAnimationFrame(drawPts);
-}
+const pts=Array.from({length:55},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,r:Math.random()*1.4+.4,o:Math.random()*.22+.05,c:['#0ea5e9','#4f46e5','#0891b2','#10b981'][Math.floor(Math.random()*4)]}));
+function drawPts(){cx.clearRect(0,0,cv.width,cv.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=cv.width;if(p.x>cv.width)p.x=0;if(p.y<0)p.y=cv.height;if(p.y>cv.height)p.y=0;cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=p.c;cx.globalAlpha=p.o;cx.fill();cx.globalAlpha=1});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.strokeStyle=pts[i].c;cx.globalAlpha=(1-d/100)*.05;cx.lineWidth=.5;cx.stroke();cx.globalAlpha=1}}requestAnimationFrame(drawPts)}
 drawPts();
 
 /* 3D TILT */
-document.querySelectorAll('[data-tilt]').forEach(c=>{
-  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),rx=((e.clientY-r.top)/r.height-.5)*-8,ry=((e.clientX-r.left)/r.width-.5)*8;c.style.transform=`perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px) scale(1.015)`});
-  c.addEventListener('mouseleave',()=>{c.style.transform=''});
-});
+document.querySelectorAll('[data-tilt]').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),rx=((e.clientY-r.top)/r.height-.5)*-8,ry=((e.clientX-r.left)/r.width-.5)*8;c.style.transform=`perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px) scale(1.015)`});c.addEventListener('mouseleave',()=>{c.style.transform=''})});
 
 /* SMOOTH SCROLL */
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}));
