@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Tsunami Soluciones — Tu negocio vende 24/7 sin contratar a nadie</title>
-<meta name="description" content="Automatizamos tu WhatsApp con IA para que tu negocio atienda, cobre y venda las 24 horas. Hecho para pymes en Chile. Desde $190.000 CLP."/>
+<meta name="description" content="Automatizamos tu WhatsApp con IA para que tu negocio atienda, cobre y venda las 24 horas. Hecho para pymes en Chile. Desde $99.000 CLP."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -30,7 +30,7 @@
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;transition:background .6s,color .4s;-webkit-font-smoothing:antialiased}
 
-/* BG ANIMADO */
+/* BG */
 .bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);animation:orbFloat 20s ease-in-out infinite}
 .orb-1{width:600px;height:600px;background:var(--orb1);top:-150px;left:-200px;animation-delay:0s}
@@ -39,20 +39,19 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);overflo
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-40px) scale(1.05)}66%{transform:translate(-20px,30px) scale(0.95)}}
 #pts{position:absolute;inset:0;opacity:.6}
 .wave-bg{position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(180deg,transparent,var(--bg2));opacity:.5}
-
-.container{max-width:1100px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
 
 /* THEME BAR */
 .theme-bar{position:fixed;top:0;right:0;z-index:200;padding:12px 16px;display:flex;align-items:center;gap:8px}
 .theme-toggle{width:44px;height:24px;border-radius:999px;background:var(--border2);border:none;cursor:pointer;position:relative;transition:background .3s;flex-shrink:0}
-.theme-toggle::after{content:'☀️';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:11px;transition:transform .3s,background .3s;box-shadow:0 1px 4px rgba(0,0,0,.2);line-height:20px;text-align:center}
+.theme-toggle::after{content:'☀️';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--surface);font-size:11px;transition:transform .3s;box-shadow:0 1px 4px rgba(0,0,0,.2);line-height:20px;text-align:center}
 [data-theme="dark"] .theme-toggle::after{content:'🌙';transform:translateX(20px)}
 .theme-label{font-size:.7rem;color:var(--ts);font-weight:600;letter-spacing:.05em}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;transition:all .4s}
 nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:68px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:68px}
 .logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none}
 .logo-icon{width:36px;height:36px;flex-shrink:0}
 .logo-text{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.01em;background:linear-gradient(135deg,var(--pri),var(--sec));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -87,8 +86,6 @@ nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdro
 .btn-wa:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,.45)}
 .btn-scroll{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--border2);color:var(--tm);padding:16px 28px;border-radius:14px;font-weight:600;font-size:.95rem;text-decoration:none;box-shadow:var(--shadow);transition:all .3s}
 .btn-scroll:hover{transform:translateY(-3px);border-color:var(--pri);color:var(--pri)}
-
-/* STATS */
 .hero-stats{display:flex;gap:0;margin-top:60px;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);animation:fadeUp .7s .45s ease both}
 .stat{flex:1;padding:20px 16px;text-align:center;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
@@ -107,7 +104,6 @@ nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdro
 .tech-lbl{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ts);white-space:nowrap}
 .tech-logos{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center}
 .tech-item{display:flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--tm);padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;white-space:nowrap}
-.tech-item span{font-size:1rem}
 
 /* CARDS */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.175,.885,.32,1.275);box-shadow:var(--shadow)}
@@ -126,7 +122,7 @@ section{padding:100px 0;position:relative;z-index:2}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 [data-tilt]{transform-style:preserve-3d;will-change:transform}
 
-/* PROBLEMA — COSTO DE OPORTUNIDAD */
+/* PROBLEMA */
 .opp-section{background:var(--surface2)}
 .opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:center}
 .opp-visual{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:36px;box-shadow:var(--shadow)}
@@ -144,7 +140,7 @@ section{padding:100px 0;position:relative;z-index:2}
 .opp-text .highlight{color:var(--pri);font-weight:700}
 .opp-cta-line{margin-top:20px;padding:14px 20px;background:rgba(5,150,105,.06);border:1px solid rgba(5,150,105,.15);border-radius:12px;font-size:.88rem;color:var(--grn);font-weight:600;line-height:1.7}
 
-/* SOLUCIÓN — EL VENDEDOR AUTÓNOMO */
+/* SOLUCIÓN */
 .sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
 .sol-card{padding:28px;text-align:center}
 .sol-step-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:800;margin:0 auto 16px;box-shadow:0 4px 14px rgba(2,132,199,.3)}
@@ -152,8 +148,6 @@ section{padding:100px 0;position:relative;z-index:2}
 .sol-card:hover .sol-em{transform:scale(1.2) rotate(-6deg)}
 .sol-t{font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700;color:var(--tx);margin-bottom:8px}
 .sol-d{font-size:.83rem;color:var(--tm);line-height:1.8}
-
-/* CHAT BIG */
 .chat-box{margin-top:52px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:32px;max-width:520px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow)}
 .chat-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--sec));display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff}
@@ -167,8 +161,6 @@ section{padding:100px 0;position:relative;z-index:2}
 .mb{align-self:flex-start;background:var(--surface);border:1px solid var(--border);border-bottom-left-radius:4px;color:var(--tm);box-shadow:var(--shadow)}
 .mb .msg-lbl{color:var(--sec)}
 .chat-note{margin-top:16px;text-align:center;font-size:.78rem;color:var(--grn);font-weight:600;background:rgba(5,150,105,.06);border:1px solid rgba(5,150,105,.15);border-radius:10px;padding:10px}
-
-/* ROI CALCULATOR */
 .roi-box{margin-top:48px;background:var(--surface);border:1.5px solid rgba(2,132,199,.25);border-radius:20px;padding:36px;max-width:560px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow-lg);text-align:center}
 .roi-t{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;color:var(--tx);margin-bottom:20px}
 .roi-row{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap}
@@ -178,25 +170,25 @@ section{padding:100px 0;position:relative;z-index:2}
 .roi-conclusion{font-size:.92rem;color:var(--tm);line-height:1.8;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
 .roi-conclusion strong{color:var(--pri)}
 
-/* PLANES */
-.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;perspective:1200px;padding-top:16px}
+/* ═══ PLANES — 4 columnas ═══ */
+.plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px;padding-top:16px;perspective:1200px}
 .plan{padding:0;overflow:visible;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
 .plan:hover{transform:translateY(-10px) rotateX(3deg)}
 .plan.pop{border-color:rgba(2,132,199,.4);box-shadow:0 8px 40px rgba(2,132,199,.14);overflow:visible}
 .plan.pop:hover{box-shadow:0 24px 72px rgba(2,132,199,.25)}
-.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 14px rgba(2,132,199,.4);z-index:10}
-.plan-inner{padding:32px 26px;position:relative;z-index:1}
-.plan-tier{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ts);margin-bottom:6px}
-.plan-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;color:var(--tx);margin-bottom:6px}
-.plan-pitch{font-size:.82rem;color:var(--pri);font-weight:600;font-style:italic;margin-bottom:18px;line-height:1.5}
-.plan-price-area{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border)}
-.plan-setup-lbl{font-size:.65rem;color:var(--ts);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
-.plan-setup-v{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:800;color:var(--tx);line-height:1;margin-bottom:10px}
-.plan-monthly{display:inline-flex;align-items:center;gap:6px;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.18);border-radius:999px;padding:5px 12px;font-size:.75rem;font-weight:700;color:var(--grn)}
-.plan-feats{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
-.plan-feats li{display:flex;align-items:flex-start;gap:9px;font-size:.83rem;color:var(--tm);line-height:1.6}
-.ck{width:19px;height:19px;min-width:19px;border-radius:5px;background:rgba(5,150,105,.1);display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--grn);margin-top:2px}
-.plan-btn{width:100%;padding:14px;border-radius:12px;font-size:.9rem;font-weight:700;cursor:pointer;border:none;transition:all .3s;letter-spacing:.02em}
+.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 14px rgba(2,132,199,.4);z-index:10}
+.plan-inner{padding:24px 20px;position:relative;z-index:1}
+.plan-tier{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ts);margin-bottom:5px}
+.plan-name{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:800;color:var(--tx);margin-bottom:5px}
+.plan-pitch{font-size:.78rem;color:var(--pri);font-weight:600;font-style:italic;margin-bottom:16px;line-height:1.5}
+.plan-price-area{margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.plan-setup-lbl{font-size:.6rem;color:var(--ts);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.plan-setup-v{font-family:'Space Grotesk',sans-serif;font-size:1.65rem;font-weight:800;color:var(--tx);line-height:1;margin-bottom:9px}
+.plan-monthly{display:inline-flex;align-items:center;gap:6px;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.18);border-radius:999px;padding:4px 11px;font-size:.72rem;font-weight:700;color:var(--grn)}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.plan-feats li{display:flex;align-items:flex-start;gap:8px;font-size:.79rem;color:var(--tm);line-height:1.55}
+.ck{width:17px;height:17px;min-width:17px;border-radius:4px;background:rgba(5,150,105,.1);display:flex;align-items:center;justify-content:center;font-size:.58rem;color:var(--grn);margin-top:2px}
+.plan-btn{width:100%;padding:12px;border-radius:11px;font-size:.86rem;font-weight:700;cursor:pointer;border:none;transition:all .3s;letter-spacing:.02em}
 .btn-outline{background:transparent;border:1.5px solid var(--border2);color:var(--tx)}
 .btn-outline:hover{border-color:var(--pri);color:var(--pri);transform:translateY(-2px)}
 .btn-fill{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;box-shadow:0 6px 20px rgba(2,132,199,.35)}
@@ -223,17 +215,19 @@ section{padding:100px 0;position:relative;z-index:2}
 
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-index:2}
-.foot{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .foot-copy{font-size:.72rem;color:var(--ts)}
 .foot-links{display:flex;gap:18px}
 .foot-links a{font-size:.73rem;color:var(--ts);text-decoration:none;transition:color .3s}
 .foot-links a:hover{color:var(--pri)}
 
 /* RESPONSIVE */
+@media(max-width:1100px){
+  .plans-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:900px){
   .opp-grid{grid-template-columns:1fr;gap:32px}
   .sol-grid{grid-template-columns:1fr 1fr}
-  .plans-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
   .hero-stats .stat{min-width:calc(50% - 1px)}
   .nav-links{display:none}
   .hamburger{display:flex}
@@ -242,6 +236,7 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
 @media(max-width:600px){
   section{padding:72px 0}
   .sol-grid{grid-template-columns:1fr}
+  .plans-grid{grid-template-columns:1fr}
   .hero h1{font-size:clamp(1.9rem,8vw,2.8rem)}
   .hero h2{font-size:1rem}
   .hero-btns{flex-direction:column;align-items:center}
@@ -251,7 +246,6 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
   .hero-stats .stat:last-child{border-bottom:none}
   .cta-box{padding:32px 18px}
   .sec-h{font-size:clamp(1.5rem,7vw,2.2rem)}
-  .plans-grid{max-width:100%}
   .opp-loss-grid{grid-template-columns:1fr}
   .roi-row{flex-direction:column;gap:12px}
   .tech-inner{flex-direction:column;gap:12px}
@@ -316,23 +310,13 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
 </div>
 
 
-<!-- ═══════════════════════════════════════
-     HERO — ROI + AHORRO DE TIEMPO
-═══════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero" style="position:relative">
   <div class="container">
     <div class="hero-inner">
       <div class="hero-badge"><span class="badge-dot"></span>🇨🇱 Automatización para pymes chilenas</div>
-
-      <h1>
-        Expande tu horario comercial a 24/7<br/>
-        <span class="grad">sin contratar a nadie.</span>
-      </h1>
-
-      <h2>
-        Automatizamos tu WhatsApp con Inteligencia Artificial para que tu negocio atienda, cobre y venda mientras tú duermes, descansas o estás de vacaciones. La inversión se paga sola con 1 o 2 ventas recuperadas al mes.
-      </h2>
-
+      <h1>Expande tu horario comercial a 24/7<br/><span class="grad">sin contratar a nadie.</span></h1>
+      <h2>Automatizamos tu WhatsApp con Inteligencia Artificial para que tu negocio atienda, cobre y venda mientras tú duermes, descansas o estás de vacaciones. La inversión se paga sola con 1 o 2 ventas recuperadas al mes.</h2>
       <div class="hero-btns">
         <a href="https://wa.me/56944532346?text=Hola!%20Me%20interesa%20saber%20cómo%20automatizar%20mi%20negocio%20con%20Tsunami" class="btn-wa">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.116 1.515 5.851L0 24l6.335-1.492A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.669-.502-5.207-1.381l-.374-.222-3.873.912.946-3.773-.243-.389A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -340,7 +324,6 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
         </a>
         <a href="#planes" class="btn-scroll">Ver planes y precios ↓</a>
       </div>
-
       <div class="hero-stats">
         <div class="stat"><div class="stat-v">24/7</div><div class="stat-l">Horario comercial</div></div>
         <div class="stat"><div class="stat-v">&lt;3 seg</div><div class="stat-l">Respuesta con IA</div></div>
@@ -371,14 +354,11 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
 </div>
 
 
-<!-- ═══════════════════════════════════════
-     PROBLEMA — EL COSTO DE OPORTUNIDAD
-═══════════════════════════════════════ -->
+<!-- PROBLEMA -->
 <section id="problema" class="opp-section">
   <div class="container">
     <div class="sec-label rev"><span class="badge-dot"></span> El costo de oportunidad</div>
     <h2 class="sec-h rev d1">Cada mensaje sin responder<br/><em>es una venta que se pierde para siempre.</em></h2>
-
     <div class="opp-grid">
       <div class="opp-visual rev d2" data-tilt>
         <div class="opp-scenario">
@@ -392,34 +372,23 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
           <div class="opp-time-l">de los clientes no esperan más de 10 minutos</div>
         </div>
         <div class="opp-loss-grid">
-          <div class="opp-loss">
-            <div class="opp-loss-v">~$240.000</div>
-            <div class="opp-loss-l">pérdida mensual estimada<br/>(8 ventas perdidas × $30.000)</div>
-          </div>
-          <div class="opp-loss">
-            <div class="opp-loss-v">~$2.880.000</div>
-            <div class="opp-loss-l">pérdida anual estimada<br/>en ventas no atendidas</div>
-          </div>
+          <div class="opp-loss"><div class="opp-loss-v">~$240.000</div><div class="opp-loss-l">pérdida mensual estimada<br/>(8 ventas perdidas × $30.000)</div></div>
+          <div class="opp-loss"><div class="opp-loss-v">~$2.880.000</div><div class="opp-loss-l">pérdida anual estimada<br/>en ventas no atendidas</div></div>
         </div>
       </div>
-
       <div class="opp-text rev d3">
         <h3>No es que tu negocio sea malo. Es que tiene un horario limitado.</h3>
         <p>Tu negocio funciona bien de lunes a viernes de 9 a 18. Pero <span class="highlight">el 43% de los mensajes de WhatsApp llegan fuera de horario comercial</span>: de noche, sábados, domingos y feriados.</p>
         <p>Cada uno de esos mensajes sin respuesta es plata que se va. Y contratar a alguien para cubrir esas horas cuesta un sueldo completo: entre $500.000 y $700.000 al mes más cargas.</p>
         <p>¿Y si pudieras cubrir ese <span class="highlight">horario fantasma</span> automáticamente, sin contratar a nadie, por una fracción de lo que cuesta un empleado?</p>
-        <div class="opp-cta-line">
-          💡 Eso es exactamente lo que hace Tsunami Soluciones. No vendemos "bots". <strong>Vendemos la expansión de tu horario comercial a costo cero en recursos humanos.</strong>
-        </div>
+        <div class="opp-cta-line">💡 Eso es exactamente lo que hace Tsunami Soluciones. No vendemos "bots". <strong>Vendemos la expansión de tu horario comercial a costo cero en recursos humanos.</strong></div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════
-     SOLUCIÓN — EL VENDEDOR AUTÓNOMO
-═══════════════════════════════════════ -->
+<!-- SOLUCIÓN -->
 <section id="solucion">
   <div class="container">
     <div style="text-align:center">
@@ -427,63 +396,54 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
       <h2 class="sec-h rev d1" style="text-align:center">Un sistema con IA que atiende,<br/><em>cobra y te avisa cuando la plata ya entró.</em></h2>
       <p class="sec-p rev d2" style="margin:0 auto;text-align:center">Nosotros construimos un asistente inteligente que trabaja por ti en WhatsApp. No es un chatbot genérico: es un sistema hecho a medida con tu tono, tus servicios y tus precios.</p>
     </div>
-
     <div class="sol-grid">
       <div class="card sol-card rev d1" data-tilt>
-        <div class="sol-step-num">1</div>
-        <span class="sol-em">💬</span>
+        <div class="sol-step-num">1</div><span class="sol-em">💬</span>
         <div class="sol-t">Atiende de forma natural con IA</div>
-        <div class="sol-d">El sistema conversa con tus clientes como lo harías tú: responde preguntas, muestra servicios, entrega precios y agenda citas. Si el cliente pregunta algo inesperado, la Inteligencia Artificial genera una respuesta coherente. La mayoría no nota que no eres tú.</div>
+        <div class="sol-d">El sistema conversa con tus clientes como lo harías tú: responde preguntas, muestra servicios, entrega precios y agenda citas. La mayoría no nota que no eres tú.</div>
       </div>
       <div class="card sol-card rev d2" data-tilt>
-        <div class="sol-step-num">2</div>
-        <span class="sol-em">💳</span>
+        <div class="sol-step-num">2</div><span class="sol-em">💳</span>
         <div class="sol-t">Cobra automáticamente por WhatsApp</div>
-        <div class="sol-d">Cuando el cliente elige un servicio, el sistema genera un link de pago de MercadoPago con el monto exacto y lo envía al chat. Acepta tarjeta de crédito, débito y transferencia. Sin intermediarios: la plata va directo a tu cuenta.</div>
+        <div class="sol-d">Genera un link de pago de MercadoPago con el monto exacto y lo envía al chat. Acepta tarjeta, débito y transferencia. La plata va directo a tu cuenta.</div>
       </div>
       <div class="card sol-card rev d3" data-tilt>
-        <div class="sol-step-num">3</div>
-        <span class="sol-em">🔔</span>
+        <div class="sol-step-num">3</div><span class="sol-em">🔔</span>
         <div class="sol-t">Te avisa solo cuando hay que hacer algo</div>
-        <div class="sol-d">No te molesta con cada mensaje. Filtra los curiosos, atiende las consultas y solo te envía una notificación cuando el pago se confirmó y el cliente está listo. Tú despiertas, abres el celular y la plata ya está en tu cuenta.</div>
+        <div class="sol-d">Filtra los curiosos y solo te notifica cuando el pago se confirmó y el cliente está listo. Tú despiertas y la plata ya está en tu cuenta.</div>
       </div>
       <div class="card sol-card rev d1" data-tilt>
-        <div class="sol-step-num">4</div>
-        <span class="sol-em">📊</span>
+        <div class="sol-step-num">4</div><span class="sol-em">📊</span>
         <div class="sol-t">Panel privado con todos los datos</div>
-        <div class="sol-d">Un dashboard web exclusivo donde ves todo: ventas del día, clientes atendidos, pagos pendientes, estadísticas de crecimiento. Accesible desde tu celular o computador. Construido en Supabase + Vercel para que sea rápido y seguro.</div>
+        <div class="sol-d">Dashboard exclusivo con ventas del día, clientes atendidos y estadísticas. Desde tu celular o computador. Rápido y seguro (Supabase + Vercel).</div>
       </div>
       <div class="card sol-card rev d2" data-tilt>
-        <div class="sol-step-num">5</div>
-        <span class="sol-em">📄</span>
+        <div class="sol-step-num">5</div><span class="sol-em">📄</span>
         <div class="sol-t">Contratos y documentos automáticos</div>
-        <div class="sol-d">Con DocuGenerator, el sistema puede generar contratos, comprobantes o fichas de inscripción automáticamente con los datos del cliente. Se envían por WhatsApp o email sin que tú intervengas. Ideal para clínicas, academias y servicios profesionales.</div>
+        <div class="sol-d">Con DocuGenerator genera contratos, comprobantes o fichas con los datos del cliente. Se envían por WhatsApp o email sin que tú intervengas.</div>
       </div>
       <div class="card sol-card rev d3" data-tilt>
-        <div class="sol-step-num">6</div>
-        <span class="sol-em">⚡</span>
+        <div class="sol-step-num">6</div><span class="sol-em">⚡</span>
         <div class="sol-t">Automatizaciones personalizadas</div>
-        <div class="sol-d">Con Make.com conectamos tu sistema a lo que necesites: Google Calendar, Sheets, CRM, email marketing, base de datos. Todo fluye automáticamente. Cada nuevo cliente genera una cadena de acciones sin intervención manual.</div>
+        <div class="sol-d">Con Make.com conectamos tu sistema a Google Calendar, Sheets, CRM o email marketing. Todo fluye automáticamente sin intervención manual.</div>
       </div>
     </div>
 
-    <!-- CHAT DEMO -->
     <div class="chat-box rev">
       <div class="chat-header"><div class="chat-avatar">🤖</div><div><div class="chat-name">Tu Negocio — Vendedor Autónomo</div><div class="chat-status">● En línea — Viernes 22:15</div></div></div>
       <div class="msgs">
         <div class="msg mc"><span class="msg-lbl">Cliente</span>Hola, ¿atienden mañana sábado?</div>
         <div class="msg mb"><span class="msg-lbl">IA</span>¡Hola! 👋 Sí, atendemos mañana de 9:00 a 14:00. ¿Qué servicio te interesa?<br/><br/>1️⃣ Consulta general — $25.000<br/>2️⃣ Evaluación completa — $45.000<br/>3️⃣ Sesión de seguimiento — $18.000</div>
         <div class="msg mc"><span class="msg-lbl">Cliente</span>La evaluación completa, ¿hay hora a las 10?</div>
-        <div class="msg mb"><span class="msg-lbl">IA</span>Perfecto ✨ Tenemos disponibilidad a las 10:00. ¿Me confirmas tu nombre completo y RUT para agendar?</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>Perfecto ✨ Tenemos disponibilidad a las 10:00. ¿Me confirmas tu nombre completo y RUT?</div>
         <div class="msg mc"><span class="msg-lbl">Cliente</span>Andrea Muñoz, 18.432.567-K</div>
-        <div class="msg mb"><span class="msg-lbl">IA</span>Listo Andrea 💙 Tu evaluación queda agendada para mañana sábado a las 10:00. Para confirmar, aquí va tu link de pago por $45.000:<br/><br/>🔗 mpago.la/evaluacion-45000<br/><br/>Puedes pagar con tarjeta, débito o transferencia.</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>Listo Andrea 💙 Tu cita queda agendada sábado 10:00. Link de pago por $45.000:<br/><br/>🔗 mpago.la/evaluacion-45000</div>
         <div class="msg mc"><span class="msg-lbl">Cliente</span>[Paga con débito]</div>
-        <div class="msg mb"><span class="msg-lbl">IA</span>✅ ¡Pago confirmado, Andrea! Tu cita queda reservada: sábado 10:00 hrs. Te esperamos 😊</div>
+        <div class="msg mb"><span class="msg-lbl">IA</span>✅ ¡Pago confirmado, Andrea! Te esperamos mañana a las 10:00 😊</div>
       </div>
-      <div class="chat-note">💤 Todo esto pasó un viernes a las 22:15 mientras tú dormías. La plata ya está en tu cuenta de MercadoPago y tú te enteraste al despertar.</div>
+      <div class="chat-note">💤 Todo esto pasó a las 22:15 mientras tú dormías. La plata ya está en tu cuenta de MercadoPago.</div>
     </div>
 
-    <!-- ROI CALCULATOR -->
     <div class="roi-box rev">
       <div class="roi-t">📊 ¿Se paga solo? Saca la cuenta:</div>
       <div class="roi-row">
@@ -491,28 +451,50 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
         <div class="roi-metric"><div class="roi-metric-v">×2</div><div class="roi-metric-l">Ventas recuperadas<br/>al mes en horario muerto</div></div>
         <div class="roi-metric"><div class="roi-metric-v">= $90.000</div><div class="roi-metric-l">Ingreso extra<br/>mensual mínimo</div></div>
       </div>
-      <div class="roi-conclusion">
-        Con solo <strong>2 ventas recuperadas al mes</strong> que antes se perdían (noches, fines de semana, feriados), el Plan Básico <strong>se paga solo y te queda ganancia</strong>. Imagina si son 5 o 10 ventas más.
-      </div>
+      <div class="roi-conclusion">Con solo <strong>2 ventas recuperadas al mes</strong> que antes se perdían, el Plan Micro <strong>se paga solo y te queda ganancia</strong>. Imagina si son 5 o 10 ventas más.</div>
     </div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════════════════
-     PLANES — 3 NIVELES
+     PLANES — 4 NIVELES
 ═══════════════════════════════════════ -->
 <section id="planes" style="background:var(--surface2)">
   <div class="container">
     <div style="text-align:center">
       <div class="sec-label rev" style="justify-content:center"><span class="badge-dot"></span> Planes y precios</div>
-      <h2 class="sec-h rev d1" style="text-align:center">Tres niveles de automatización.<br/><em>Uno está hecho para tu negocio.</em></h2>
+      <h2 class="sec-h rev d1" style="text-align:center">Cuatro niveles de automatización.<br/><em>Uno está hecho para tu negocio.</em></h2>
       <p class="sec-p rev d2" style="margin:0 auto;text-align:center">Setup único + mensualidad por infraestructura. Sin contrato de permanencia. Si no te sirve, cancelas y listo.</p>
     </div>
 
     <div class="plans-grid">
-      <!-- BÁSICO -->
+
+      <!-- ── MICRO ── -->
       <div class="card plan rev d1" data-tilt>
+        <div class="plan-inner">
+          <div class="plan-tier">Solo bot de atención</div>
+          <div class="plan-name">⚪ Plan Micro</div>
+          <div class="plan-pitch">"Solo quiero que mi celular deje de sonar con las mismas preguntas."</div>
+          <div class="plan-price-area">
+            <div class="plan-setup-lbl">Setup — configuración e implementación</div>
+            <div class="plan-setup-v">$99.000</div>
+            <div class="plan-monthly">+ $19.000 al mes</div>
+          </div>
+          <ul class="plan-feats">
+            <li><span class="ck">✓</span>Bot de WhatsApp activo 24/7</li>
+            <li><span class="ck">✓</span>Menú de opciones estático</li>
+            <li><span class="ck">✓</span>Respuestas a preguntas frecuentes</li>
+            <li><span class="ck">✓</span>Alerta simple a tu WhatsApp</li>
+            <li><span class="ck">✓</span>Servidor incluido</li>
+            <li><span class="ck">✓</span>Listo en 5 a 7 días hábiles</li>
+          </ul>
+          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Micro%20solo%20bot%20de%20atención')">Quiero el Plan Micro</button>
+        </div>
+      </div>
+
+      <!-- ── BÁSICO ── -->
+      <div class="card plan rev d2" data-tilt>
         <div class="plan-inner">
           <div class="plan-tier">Para filtrar y organizar consultas</div>
           <div class="plan-name">🟢 Plan Básico</div>
@@ -523,22 +505,21 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
             <div class="plan-monthly">+ $45.000 al mes</div>
           </div>
           <ul class="plan-feats">
-            <li><span class="ck">✓</span>Bot de WhatsApp activo 24/7</li>
-            <li><span class="ck">✓</span>Flujo de opciones con menú interactivo</li>
-            <li><span class="ck">✓</span>Respuestas automáticas a preguntas frecuentes</li>
-            <li><span class="ck">✓</span>Alertas básicas a tu WhatsApp personal</li>
-            <li><span class="ck">✓</span>Servidor y base de datos incluidos</li>
+            <li><span class="ck">✓</span>Todo lo del Micro, más:</li>
+            <li><span class="ck">✓</span>Flujo de opciones avanzado</li>
+            <li><span class="ck">✓</span>Alertas configurables</li>
+            <li><span class="ck">✓</span>Base de datos de clientes</li>
             <li><span class="ck">✓</span>1 página web de tu negocio</li>
             <li><span class="ck">✓</span>Soporte por chat 30 días</li>
             <li><span class="ck">✓</span>Listo en 7 a 14 días hábiles</li>
           </ul>
-          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Básico%20Filtro%2024/7')">Quiero el Plan Básico</button>
+          <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Me%20interesa%20el%20Plan%20Básico')">Quiero el Plan Básico</button>
         </div>
       </div>
 
-      <!-- PRO — DESTACADO -->
-      <div class="card plan pop rev d2" data-tilt>
-        <div class="plan-badge">⭐ Vendedor Autónomo — el más elegido</div>
+      <!-- ── PRO DESTACADO ── -->
+      <div class="card plan pop rev d3" data-tilt>
+        <div class="plan-badge">⭐ el más elegido</div>
         <div class="plan-inner">
           <div class="plan-tier">Para vender y cobrar automáticamente</div>
           <div class="plan-name">🔵 Plan Pro</div>
@@ -552,10 +533,9 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
             <li><span class="ck">✓</span>Todo lo del Básico, más:</li>
             <li><span class="ck">✓</span>IA conversacional (Gemini/ChatGPT)</li>
             <li><span class="ck">✓</span>Respuestas dinámicas y naturales</li>
-            <li><span class="ck">✓</span>Cobros automáticos con MercadoPago</li>
-            <li><span class="ck">✓</span>Link de pago generado en el chat</li>
-            <li><span class="ck">✓</span>Notificación de pago confirmado en tiempo real</li>
-            <li><span class="ck">✓</span>Panel de administración con métricas</li>
+            <li><span class="ck">✓</span>Cobros con MercadoPago</li>
+            <li><span class="ck">✓</span>Notificación de pago en tiempo real</li>
+            <li><span class="ck">✓</span>Panel de métricas</li>
             <li><span class="ck">✓</span>Hasta 3 páginas web</li>
             <li><span class="ck">✓</span>Soporte prioritario 60 días</li>
           </ul>
@@ -563,8 +543,8 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
         </div>
       </div>
 
-      <!-- PREMIUM -->
-      <div class="card plan rev d3" data-tilt>
+      <!-- ── PREMIUM ── -->
+      <div class="card plan rev d4" data-tilt>
         <div class="plan-inner">
           <div class="plan-tier">Negocio en piloto automático completo</div>
           <div class="plan-name">🟣 Plan Premium</div>
@@ -577,19 +557,19 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
           <ul class="plan-feats">
             <li><span class="ck">✓</span>Todo lo del Pro, más:</li>
             <li><span class="ck">✓</span>IA avanzada con contexto extendido</li>
-            <li><span class="ck">✓</span>Panel de Admin privado (Supabase + Vercel)</li>
-            <li><span class="ck">✓</span>Contratos automáticos con DocuGenerator</li>
+            <li><span class="ck">✓</span>Panel de Admin privado (Supabase)</li>
+            <li><span class="ck">✓</span>Contratos automáticos (DocuGenerator)</li>
             <li><span class="ck">✓</span>Sincronización con CRM</li>
-            <li><span class="ck">✓</span>Automatizaciones Make.com personalizadas</li>
+            <li><span class="ck">✓</span>Automatizaciones Make.com</li>
             <li><span class="ck">✓</span>Multi-sucursal o multi-vendedor</li>
             <li><span class="ck">✓</span>Páginas web ilimitadas</li>
-            <li><span class="ck">✓</span>Capacitación completa a tu equipo</li>
             <li><span class="ck">✓</span>Código fuente entregado</li>
             <li><span class="ck">✓</span>Soporte dedicado 90 días</li>
           </ul>
           <button class="plan-btn btn-outline" onclick="window.open('https://wa.me/56944532346?text=Hola!%20Quiero%20cotizar%20el%20Plan%20Premium%20Ecosistema%20Tsunami')">Solicitar cotización</button>
         </div>
       </div>
+
     </div>
 
     <div class="price-note rev">
@@ -599,9 +579,7 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
 </section>
 
 
-<!-- ═══════════════════════════════════════
-     FAQ — REBATIENDO OBJECIONES
-═══════════════════════════════════════ -->
+<!-- FAQ -->
 <section id="preguntas">
   <div class="container">
     <div style="text-align:center">
@@ -609,49 +587,41 @@ footer{border-top:1px solid var(--border);padding:26px 20px;position:relative;z-
       <h2 class="sec-h rev d1" style="text-align:center">Objeciones honestas,<br/><em>respuestas directas.</em></h2>
     </div>
     <div class="faq-wrap">
-
       <div class="card faq rev d1">
         <div class="faq-q">¿Por qué hay un costo de setup Y una mensualidad? ¿No es mucho?<span class="faq-arr">▼</span></div>
-        <div class="faq-a">Son dos cosas distintas. El <strong>setup</strong> es la ingeniería: diseñar el flujo de tu bot, configurar la IA con la información de tu negocio, integrar MercadoPago, montar el panel y las páginas web. Es trabajo hecho a medida, no es una plantilla genérica.<br/><br/>La <strong>mensualidad</strong> cubre la infraestructura que mantiene todo funcionando: servidores (Supabase, Vercel), tokens de Inteligencia Artificial (cada respuesta tiene un costo de procesamiento), la API de WhatsApp Cloud, y el soporte técnico continuo. Si algo falla a las 2 AM, nosotros nos encargamos.<br/><br/>En resumen: el setup lo pagas una vez, la mensualidad es lo que cuesta mantener un sistema funcionando 24/7. Es como la diferencia entre construir un local y pagar el arriendo con servicios incluidos.</div>
+        <div class="faq-a">Son dos cosas distintas. El <strong>setup</strong> es la ingeniería: diseñar el flujo de tu bot, configurar la IA con la información de tu negocio, integrar MercadoPago, montar el panel y las páginas web. Es trabajo hecho a medida, no es una plantilla genérica.<br/><br/>La <strong>mensualidad</strong> cubre la infraestructura que mantiene todo funcionando: servidores (Supabase, Vercel), tokens de IA (cada respuesta tiene un costo), la API de WhatsApp Cloud, y el soporte técnico continuo.<br/><br/>En resumen: el setup lo pagas una vez, la mensualidad mantiene el sistema 24/7. Como la diferencia entre construir un local y pagar el arriendo con servicios incluidos.</div>
       </div>
-
       <div class="card faq rev d2">
         <div class="faq-q">A mis clientes no les gustan los robots. Van a dejar de comprarme.<span class="faq-arr">▼</span></div>
-        <div class="faq-a">Esa preocupación tiene sentido si piensas en los bots antiguos que responden "No entendí tu consulta, elige una opción del 1 al 5".<br/><br/>Esto es completamente diferente. Nuestro sistema usa <strong>Inteligencia Artificial (Gemini/ChatGPT)</strong> que conversa de forma natural, entiende contexto y responde como lo haría un humano capacitado. Le configuramos el tono de tu negocio: puede ser cercano, formal, amigable — como tú atiendas.<br/><br/>Además, <strong>filtra a los curiosos y te pasa solo a los clientes VIP</strong>: los que realmente quieren comprar y están listos para pagar. Tú te ahorras 50 conversaciones inútiles al mes y solo recibes las que importan.<br/><br/>Dato: en los negocios donde lo hemos implementado, la mayoría de los clientes ni se da cuenta de que no están hablando con el dueño.</div>
+        <div class="faq-a">Esa preocupación tiene sentido si piensas en los bots antiguos del "elige una opción del 1 al 5". Esto es completamente diferente.<br/><br/>Nuestro sistema usa <strong>IA (Gemini/ChatGPT)</strong> que conversa de forma natural, entiende contexto y responde como un humano capacitado. Le configuramos el tono de tu negocio: cercano, formal o amigable — como tú atiendas.<br/><br/>Además <strong>filtra a los curiosos y te pasa solo a los clientes VIP</strong>. En los negocios donde lo hemos implementado, la mayoría de los clientes ni se da cuenta de que no hablan con el dueño.</div>
       </div>
-
       <div class="card faq rev d3">
         <div class="faq-q">Suena interesante, pero ¿no es muy caro para mi negocio?<span class="faq-arr">▼</span></div>
-        <div class="faq-a">Hagamos la cuenta al revés. Si tu servicio promedio vale $30.000 y el sistema te recupera <strong>2 ventas al mes</strong> que antes se perdían (un viernes de noche, un domingo, un feriado), eso son $60.000 extra de ingresos.<br/><br/>El Plan Básico cuesta $45.000/mes. <strong>Con solo 2 ventas recuperadas, ya se pagó solo y te queda ganancia.</strong><br/><br/>Ahora compara: contratar a alguien para cubrir esas horas te costaría $500.000-$700.000/mes en sueldo + cargas. El Plan Pro cuesta $85.000/mes y trabaja 24/7, incluyendo feriados, sin descanso, sin errores.<br/><br/>La pregunta real no es si es caro. Es: <strong>¿cuánta plata estás perdiendo cada mes por no tenerlo?</strong></div>
+        <div class="faq-a">Hagamos la cuenta al revés. Si tu servicio promedio vale $30.000 y el sistema te recupera <strong>2 ventas al mes</strong> que antes se perdían (un viernes de noche, un domingo, un feriado), eso son $60.000 extra.<br/><br/>El Plan Micro cuesta $19.000/mes. <strong>Con solo 2 ventas recuperadas, ya se pagó varias veces y te queda ganancia.</strong><br/><br/>Contratar a alguien para esas horas costaría $500.000-$700.000/mes. La pregunta real es: <strong>¿cuánta plata estás perdiendo cada mes por no tenerlo?</strong></div>
       </div>
-
       <div class="card faq rev d4">
         <div class="faq-q">¿Cuánto tiempo toma tener el sistema funcionando?<span class="faq-arr">▼</span></div>
-        <div class="faq-a">Depende del plan. El <strong>Básico</strong> queda listo en 7 a 14 días hábiles. El <strong>Pro</strong> entre 14 y 21 días. El <strong>Premium</strong> entre 3 y 5 semanas dependiendo de la complejidad.<br/><br/>Durante todo el proceso te mantenemos al tanto por WhatsApp, te mostramos avances y hacemos pruebas contigo antes de activarlo con clientes reales.</div>
+        <div class="faq-a">El <strong>Micro</strong> queda listo en 5 a 7 días hábiles. El <strong>Básico</strong> en 7 a 14 días. El <strong>Pro</strong> entre 14 y 21 días. El <strong>Premium</strong> entre 3 y 5 semanas.<br/><br/>Durante todo el proceso te mantenemos al tanto por WhatsApp y hacemos pruebas contigo antes de activarlo con clientes reales.</div>
       </div>
-
       <div class="card faq rev d5">
         <div class="faq-q">¿La plata va directo a mi cuenta? ¿Ustedes tocan el dinero?<span class="faq-arr">▼</span></div>
-        <div class="faq-a">Jamás. Los cobros van directo a <strong>tu cuenta personal de MercadoPago</strong>, vinculada a tu banco. Nosotros solo configuramos la integración técnica — no vemos, tocamos ni intermediamos tu dinero. Es como si MercadoPago fuera tu caja registradora y nosotros el que la instala.</div>
+        <div class="faq-a">Jamás. Los cobros van directo a <strong>tu cuenta personal de MercadoPago</strong>, vinculada a tu banco. Nosotros solo configuramos la integración técnica — no vemos, tocamos ni intermediamos tu dinero.</div>
       </div>
-
       <div class="card faq rev">
         <div class="faq-q">¿Puedo cancelar cuando quiera?<span class="faq-arr">▼</span></div>
-        <div class="faq-a">Sí. No hay contrato de permanencia. Si un mes decides que ya no lo necesitas, avisas y se suspende la mensualidad. Sin multas, sin penalización, sin letras chicas. En el Plan Premium, además, te entregamos el código fuente para que puedas seguir operando de forma independiente si lo deseas.</div>
+        <div class="faq-a">Sí. No hay contrato de permanencia. Si decides que ya no lo necesitas, avisas y se suspende la mensualidad. Sin multas ni letras chicas. En el Plan Premium también te entregamos el código fuente.</div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════
-     CTA FINAL
-═══════════════════════════════════════ -->
+<!-- CTA FINAL -->
 <section class="cta-sec">
   <div class="container">
     <div class="cta-box rev">
       <div class="cta-t">¿Cuántas ventas perdiste<br/>este mes por no responder a tiempo?</div>
-      <p class="cta-d">El diagnóstico es gratuito. Cuéntanos qué hace tu negocio, cuántos mensajes recibes al día y qué servicios ofreces. En menos de 24 horas te enviamos una propuesta personalizada con el plan que te conviene, el ROI estimado y un demo de cómo se vería tu Vendedor Autónomo.</p>
+      <p class="cta-d">El diagnóstico es gratuito. Cuéntanos qué hace tu negocio, cuántos mensajes recibes al día y qué servicios ofreces. En menos de 24 horas te enviamos una propuesta personalizada con el plan que te conviene y el ROI estimado.</p>
       <div class="cta-acts">
         <a href="https://wa.me/56944532346?text=Hola%20Tsunami!%20Quiero%20agendar%20un%20diagnóstico%20gratuito%20para%20mi%20negocio" class="btn-wa">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.116 1.515 5.851L0 24l6.335-1.492A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.669-.502-5.207-1.381l-.374-.222-3.873.912.946-3.773-.243-.389A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
